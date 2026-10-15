@@ -1,14 +1,11 @@
-/* HIU Hospital — Color tokens · ORIGINAL palette (restored)
-   The brand-bright palette as designed before the v2 experiment.
-   Brand primary = logo blue #0052D7. Indigo-tinted darks & neutrals
-   (no flat gray), bright secondary accents, soft-background status colors.
-   Full ramps are kept so components using scale tokens keep working;
-   the --hiu-* legacy aliases are preserved too. */
+/* HIU Hospital — Color tokens · Clinical Sky v2 documented anchors
+   The README defines selected v2 values but not every ramp step. Keep
+   unspecified steps from the restored palette until complete values exist. */
 
 :root {
   /* ============ PRIMARY · Blue (brand #0052D7) ============ */
   --blue-50:  #eef3fd;
-  --blue-100: #dbe7fb;
+  --blue-100: #eef0ff;
   --blue-200: #c2d8f7;
   --blue-300: #6f9fe8;
   --blue-400: #4f8ae6;
@@ -16,10 +13,10 @@
   --blue-600: #0052d7;
   --blue-700: #0044b3;
   --blue-800: #00337f;
-  --blue-900: #16205c;
+  --blue-900: #002663;
 
   /* ============ DEEP BRAND TONES (indigo-tinted darks, replace black/gray) ============ */
-  --navy:   #16205c;
+  --navy:   #002663;
   --indigo: #2a3576;
   --teal:   #1b7e93;
   --cream:  #faf6f0;
@@ -39,17 +36,17 @@
 
   /* ============ NEUTRAL · indigo-tinted (bright & airy, no flat gray) ============ */
   --neutral-0:   #ffffff;
-  --neutral-50:  #f6f8fd;
+  --neutral-50:  #f5f8ff;
   --neutral-100: #eef1f9;
   --neutral-200: #e1e5f2;
   --neutral-300: #c7cce0;
   --neutral-400: #9aa2c4;
   --neutral-500: #6e7699;
   --neutral-600: #525a7d;
-  --neutral-700: #3b4177;   /* body text */
+  --neutral-700: #374056;   /* body text */
   --neutral-800: #232a4d;
-  --neutral-900: #21286A;
-  --neutral-ink: #171F5B;   /* near-black indigo ink */
+  --neutral-900: #141A28;
+  --neutral-ink: var(--neutral-900);
 
   /* ============ STATUS · Soft Clinical (V4) — full 9-step ramps (100→900) ============
      Lightest 100 = badge/soft background · 500 = solid · 700–800 = accessible text. */
@@ -134,7 +131,7 @@
   --surface-brand:          var(--blue-500);
   --surface-brand-soft:     var(--blue-50);
 
-  --border-subtle:          #e8eef7;
+  --border-subtle:          #e1e7f4;
   --border-default:         var(--neutral-300);
   --border-strong:          var(--neutral-400);
   --border-focus:           var(--blue-500);
