@@ -1,0 +1,15 @@
+# Netlify deployment config for the Sale CRM prototype (TanStack Start + Nitro)
+#
+# The build target comes from vite.config.ts -> `nitro: { preset: "netlify" }`.
+# Without that line Nitro defaults to cloudflare-module, which emits .output/
+# and no dist/, and this publish directory then does not exist.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # The lockfile was resolved with legacy peer resolution: the vitest peer set
+  # (jsdom / happy-dom / canvas) trips an npm 10 arborist crash ("Cannot read
+  # properties of null (reading 'edgesOut')") under strict peer resolution.
+  NPM_FLAGS = "--legacy-peer-deps"

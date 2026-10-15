@@ -1,0 +1,33 @@
+/* HIU Hospital — Surface theme scopes · Soft Clinical · Calm Care
+   The system now speaks ONE calm, rounded language across every surface
+   (patient app, kiosk, doctor & admin portal, website). The :root defaults
+   in spacing.css already carry the soft radii; these scopes only fine-tune
+   density and rounding per audience — none of them re-squares the system.
+   Badges, toggles, step dots and avatars keep --radius-pill everywhere. */
+
+/* App (patient mobile) + Kiosk: the calm default, kept large & friendly.
+   Inherit :root radii as-is — no overrides needed, listed for clarity. */
+.hiu-app {
+  /* uses :root soft radii unchanged (sm 10 · md 14 · lg 16 · xl 20 · 2xl 24) */
+}
+
+/* Portal (doctor / admin): same soft language, a touch tighter + flatter
+   so dense data tables and toolbars stay calm without feeling puffy. */
+.hiu-portal {
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  14px;
+  --radius-xl:  16px;
+  --radius-2xl: 20px;
+  --shadow-md:  0 3px 12px rgba(14, 19, 32, 0.05);
+  --shadow-lg:  0 8px 24px rgba(14, 19, 32, 0.07);
+}
+
+/* Web: welcoming marketing surface — a little rounder & airier. */
+.hiu-web {
+  --radius-sm:  12px;
+  --radius-md:  16px;
+  --radius-lg:  20px;
+  --radius-xl:  26px;
+  --radius-2xl: 32px;
+}

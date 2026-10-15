@@ -1,0 +1,57 @@
+/* HIU Hospital — Typography tokens
+   Plus Jakarta Sans = display & headings (geometric, modern, friendly).
+   Lexend          = body, UI labels, long-form (tuned for reading speed).
+   Casing: sentence case for prose; ALL-CAPS only for the logo lockup,
+   short overlines and department tags. Style is light & airy — favour
+   lighter weights and generous size for clarity. */
+
+:root {
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body:    'Lexend', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'SFMono-Regular', ui-monospace, 'Menlo', monospace;
+
+  /* Weights */
+  --fw-light:     300; /* @kind other */
+  --fw-regular:   400; /* @kind other */
+  --fw-medium:    500; /* @kind other */
+  --fw-semibold:  600; /* @kind other */
+  --fw-bold:      700; /* @kind other */
+  --fw-extrabold: 800; /* @kind other */
+
+  /* Type scale (rem, 16px base) — bumped up a step for clearer, larger content */
+  --fs-display:   3.75rem;  /* 60 — hero */
+  --fs-h1:        2.75rem;  /* 44 */
+  --fs-h2:        2.125rem; /* 34 */
+  --fs-h3:        1.625rem; /* 26 */
+  --fs-h4:        1.3125rem;/* 21 */
+  --fs-lg:        1.1875rem;/* 19 */
+  --fs-base:      1.0625rem;/* 17 — larger base body for readability */
+  --fs-sm:        0.9375rem;/* 15 */
+  --fs-caption:   0.875rem; /* 14 — dense UI labels, captions, table cells */
+  --fs-xs:        0.8125rem;/* 13 — overlines, captions, badges */
+
+  /* Line heights */
+  --lh-tight:     1.12; /* @kind other */
+  --lh-snug:      1.28; /* @kind other */
+  --lh-normal:    1.5; /* @kind other */
+  --lh-relaxed:   1.65; /* @kind other */
+
+  /* Letter spacing */
+  --ls-tight:     -0.02em; /* @kind other */
+  --ls-normal:    0; /* @kind other */
+  --ls-wide:      0.04em; /* @kind other */
+  --ls-caps:      0.09em; /* @kind other */
+
+  --text-overline-transform: uppercase; /* @kind other */
+}
+
+/* Convenience text classes — note the lighter heading weights ("mảnh hơn") */
+.hiu-display { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--ls-tight); color: var(--text-heading); }
+.hiu-h1 { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-h1); line-height: var(--lh-tight); letter-spacing: var(--ls-tight); color: var(--text-heading); }
+.hiu-h2 { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h2); line-height: var(--lh-snug); color: var(--text-heading); }
+.hiu-h3 { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h3); line-height: var(--lh-snug); color: var(--text-heading); }
+.hiu-h4 { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h4); line-height: var(--lh-snug); color: var(--text-strong); }
+.hiu-body { font-family: var(--font-body); font-weight: var(--fw-regular); font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--text-body); }
+.hiu-small { font-family: var(--font-body); font-weight: var(--fw-regular); font-size: var(--fs-sm); line-height: var(--lh-normal); color: var(--text-body); }
+.hiu-caption { font-family: var(--font-body); font-weight: var(--fw-regular); font-size: var(--fs-caption); line-height: var(--lh-normal); color: var(--text-body); }
+.hiu-overline { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-xs); line-height: var(--lh-normal); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--color-brand); }

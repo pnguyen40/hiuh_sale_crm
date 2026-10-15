@@ -1,0 +1,47 @@
+/* HIU Hospital — Spacing, radius, shadow, layout tokens */
+
+:root {
+  /* Spacing scale (4px base grid) */
+  --space-0:   0;
+  --space-1:   0.25rem;  /* 4 */
+  --space-2:   0.5rem;   /* 8 */
+  --space-3:   0.75rem;  /* 12 */
+  --space-4:   1rem;     /* 16 */
+  --space-5:   1.5rem;   /* 24 */
+  --space-6:   2rem;     /* 32 */
+  --space-7:   3rem;     /* 48 */
+  --space-8:   4rem;     /* 64 */
+  --space-9:   6rem;     /* 96 */
+
+  /* Radius — Soft Clinical · Calm Care: rounded, gentle, reassuring.
+     Controls/inputs 10, buttons+avatars 14, cards+segments 16, panels 20–24.
+     Badges, toggles, step dots and avatars go fully round via --radius-pill. */
+  --radius-xs:   8px;
+  --radius-sm:   10px;
+  --radius-md:   14px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-2xl:  24px;
+  --radius-pill: 999px;
+
+  /* Shadows — very soft, low-contrast, blue-tinted (calm care feel).
+     md matches the V4 card lift; brand matches the V4 primary-button lift. */
+  --shadow-xs:  0 1px 2px rgba(14, 19, 32, 0.05);
+  --shadow-sm:  0 2px 8px rgba(14, 19, 32, 0.05);
+  --shadow-md:  0 4px 16px rgba(14, 19, 32, 0.06);
+  --shadow-lg:  0 10px 30px rgba(14, 19, 32, 0.08);
+  --shadow-brand: 0 4px 16px rgba(0, 82, 215, 0.18);
+
+  /* Layout */
+  --container-max: 1200px; /* @kind other */
+  --content-max:   720px; /* @kind other */
+  --sidebar-w:     264px; /* @kind other */
+  --header-h:      72px; /* @kind other */
+
+  /* Motion — calm, no bounce; quick affordances, gentle reveals */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --dur-fast:      120ms; /* @kind other */
+  --dur-normal:    200ms; /* @kind other */
+  --dur-slow:      320ms; /* @kind other */
+}
