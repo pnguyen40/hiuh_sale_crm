@@ -31,3 +31,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+/operation_portal_design_system
