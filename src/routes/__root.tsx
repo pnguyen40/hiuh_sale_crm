@@ -11,7 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportAppError } from "../lib/error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -39,7 +39,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportAppError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (
@@ -78,12 +78,36 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sale CRM · Operation Portal" },
-      { name: "description", content: "HIUH · HBH Sale CRM prototype with simulated customer and corporate workflows." },
-      { property: "og:title", content: "Sale CRM · Operation Portal" },
-      { property: "og:description", content: "HIUH · HBH customer consultation and corporate opportunity prototype." },
+      { name: "theme-color", content: "#0052D7" },
+      { title: "Sale CRM · Operation Portal | HIUH · HBH" },
+      {
+        name: "description",
+        content:
+          "Hệ thống Sale CRM - Quản lý hồ sơ tư vấn B2C, danh bạ Contact và xúc tiến cơ hội khám đoàn doanh nghiệp B2B tại Bệnh viện Đại học Quốc tế Hồng Bàng.",
+      },
+      { property: "og:site_name", content: "HIUH Operation Portal" },
+      { property: "og:locale", content: "vi_VN" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Sale CRM · Operation Portal | HIUH · HBH" },
+      {
+        property: "og:description",
+        content:
+          "Hệ thống Sale CRM - Quản lý hồ sơ tư vấn B2C, danh bạ Contact và xúc tiến cơ hội khám đoàn doanh nghiệp B2B tại Bệnh viện Đại học Quốc tế Hồng Bàng.",
+      },
+      { property: "og:image", content: "https://hiuh-crm-prototype.netlify.app/og-image.png" },
+      { property: "og:image:secure_url", content: "https://hiuh-crm-prototype.netlify.app/og-image.png" },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Sale CRM · Operation Portal | HIUH · HBH" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sale CRM · Operation Portal | HIUH · HBH" },
+      {
+        name: "twitter:description",
+        content:
+          "Hệ thống Sale CRM - Quản lý hồ sơ tư vấn B2C, danh bạ Contact và xúc tiến cơ hội khám đoàn doanh nghiệp B2B tại Bệnh viện Đại học Quốc tế Hồng Bàng.",
+      },
+      { name: "twitter:image", content: "https://hiuh-crm-prototype.netlify.app/og-image.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -96,7 +120,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", href: "/icon.png", type: "image/png", sizes: "256x256" },
+      { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { rel: "icon", href: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
     ],
   }),
   shellComponent: RootShell,

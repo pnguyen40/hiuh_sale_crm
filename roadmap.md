@@ -1,5 +1,5 @@
 # CRM prototype
-- [x] Convert the uploaded prototype into the Lovable app, preserving sample screens and interactions.
+- [x] Chuyển đổi prototype sang ứng dụng React TanStack Start, bảo toàn toàn bộ tương tác và màn hình mẫu.
 - [x] Verify navigation, lead creation, and activity updates in the browser.
 - [x] Apply HIU design tokens (colors, Plus Jakarta Sans + Lexend, radii, shadows) to existing screens.
 - [x] Replace Material Symbols with Lucide icons.

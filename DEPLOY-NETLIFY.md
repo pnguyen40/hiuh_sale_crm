@@ -51,4 +51,4 @@ Mỗi lần push code mới lên repo, Netlify tự build và deploy lại.
   `src/routes/__root.tsx`, không cần asset cục bộ.
 - Bộ design system dùng trong prototype nằm ở `src/design-system/` — xem `DESIGN-SYSTEM.md`.
 - Nếu muốn bản chạy thử nhanh không cần Git: chạy `npm install && npm run dev` tại máy,
-  hoặc dùng chức năng **Download codebase** của Lovable.
+  hoặc tải file zip của repository.
