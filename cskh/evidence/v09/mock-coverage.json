@@ -1,0 +1,120 @@
+{
+  "counts": {
+    "cases": 63,
+    "tickets": 25,
+    "activity": 128
+  },
+  "fields": {
+    "cases": {
+      "kind": [
+        "ai",
+        "contact",
+        "booking"
+      ],
+      "channel": [
+        "WEB",
+        "APP"
+      ],
+      "topic": [
+        "tu-van-goi",
+        "dat-lich",
+        "bao-hiem-vien-phi",
+        "tra-cuu-ket-qua",
+        "gop-y",
+        "khac"
+      ],
+      "status": [
+        "IN_PROGRESS",
+        "NEW",
+        "WAITING",
+        "RESOLVED",
+        "CANCELLED"
+      ],
+      "owner": [
+        "mai",
+        null,
+        "linh",
+        "huy"
+      ],
+      "purpose": [
+        "UNKNOWN",
+        "B2C",
+        "B2B"
+      ],
+      "bookingStatus": [
+        "PENDING_ARRANGEMENT",
+        "CONFIRMED",
+        "CANCELLED"
+      ],
+      "log": [
+        "FULL",
+        "PARTIAL",
+        "UNAVAILABLE"
+      ]
+    },
+    "tickets": {
+      "requestType": [
+        "appointment",
+        "insurance",
+        "records",
+        "support",
+        "other"
+      ],
+      "status": [
+        "NEW",
+        "IN_PROGRESS",
+        "WAITING",
+        "RESOLVED",
+        "CANCELLED"
+      ],
+      "priority": [
+        "HIGH",
+        "NORMAL",
+        "LOW"
+      ],
+      "unit": [
+        "booking",
+        "finance",
+        "planning",
+        "cskh"
+      ]
+    },
+    "activity": {
+      "action": [
+        "assign",
+        "summary_refresh",
+        "ticket_update",
+        "chat_send",
+        "crm",
+        "booking",
+        "category",
+        "reopen",
+        "cancel",
+        "resolve",
+        "wait",
+        "contact",
+        "ticket_create",
+        "view_detail",
+        "start",
+        "claim",
+        "receive"
+      ],
+      "actor": [
+        "mai",
+        "system",
+        "supervisor",
+        "huy",
+        "linh"
+      ],
+      "objectType": [
+        "REQUEST",
+        "TICKET"
+      ],
+      "result": [
+        "SUCCESS",
+        "DENIED",
+        "FAILED"
+      ]
+    }
+  }
+}

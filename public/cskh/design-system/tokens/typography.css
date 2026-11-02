@@ -1,0 +1,11 @@
+/* Fixed operational-console sizes; no viewport-scaled font sizes. */
+:root {
+ --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+ --font-body: "Lexend", ui-sans-serif, system-ui, sans-serif;
+ --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+ --crm-type-page: 22px; --crm-type-section: 15px; --crm-type-body: 14px;
+ --crm-type-row: 13px; --crm-type-badge: 12px; --crm-type-label: 11px;
+ --crm-type-number: 28px; --crm-line-body: 1.5; --crm-line-number: 1.2;
+}
+.crm-root, .crm-prototype { font-family: var(--font-body); font-size: var(--crm-type-body); color: var(--crm-text-body); letter-spacing: 0; }
+.crm-prototype h1, .crm-prototype h2, .crm-prototype h3 { font-family: var(--font-display); color: var(--crm-text-heading); }

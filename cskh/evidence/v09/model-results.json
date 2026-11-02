@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Session boundary: before expiry / at expiry / 14:59.999 / 15:00",
+    "pass": true
+  },
+  {
+    "name": "Expired never allows sending or restarting live mode",
+    "pass": true
+  },
+  {
+    "name": "Recent filter includes only 0 <= age < 15min, old retained in unfiltered list",
+    "pass": true
+  },
+  {
+    "name": "Recent scope cannot leak another owner to STAFF",
+    "pass": true
+  },
+  {
+    "name": "Multiple topics OR; source AND; empty selection all",
+    "pass": true
+  },
+  {
+    "name": "Multiple owners and status AND",
+    "pass": true
+  },
+  {
+    "name": "Saved view round trips multi-select and recent-window filter",
+    "pass": true
+  },
+  {
+    "name": "Preview masks queue, revoked and unavailable",
+    "pass": true
+  },
+  {
+    "name": "Latest public reply updates sender, excludes notes, failed and internal messages",
+    "pass": true
+  },
+  {
+    "name": "All sender roles have fixtures; no fake unavailable preview; escaped markup",
+    "pass": true
+  },
+  {
+    "name": "63 unique cases, sources, all topics and states, long/missing/invalid contact",
+    "pass": true
+  },
+  {
+    "name": "25 tickets cover 5 types, 5 states, 3 priorities, 4 units with references",
+    "pass": true
+  },
+  {
+    "name": "Log outcomes, actors, diffs, reason and correlation available; multi-filter works",
+    "pass": true
+  },
+  {
+    "name": "All 46 inherited frames initialise with source references and fixtures",
+    "pass": true
+  }
+]

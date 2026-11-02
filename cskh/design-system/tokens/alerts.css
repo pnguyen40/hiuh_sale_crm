@@ -1,0 +1,268 @@
+/* HIU Hospital & EMR — Emergency Alert & Multi-Tenant Tokens
+   Layer 1: Severity = Color (4 levels + drill modifier)
+   Layer 2: Incident Type = Icon + Text (strictly neutral icon badge, no semantic color)
+   Multi-tenant: Tenant brand scope limited to logo & subtle header accent.
+*/
+
+:root {
+  /* ============ MULTI-TENANT BRANDING (LOW-EFFORT SCOPE) ============ */
+  --tenant-header-bg:         var(--crm-bg-surface, #ffffff);
+  --tenant-header-accent:     #0d9488; /* Configurable: default teal accent strip under header */
+  --tenant-logo-max-h:        36px;
+
+  /* ============ LAYER 1 · CRITICAL (Khẩn cấp) ============ */
+  --alert-critical-solid:     #b91c1c; /* Red 700 - Active emergency fill */
+  --alert-critical-on-solid:  #ffffff;
+  --alert-critical-soft:      #fee2e2; /* Red 100 - Tinted background */
+  --alert-critical-text:      #b91c1c; /* Text on soft or white */
+  --alert-critical-border:    #dc2626; /* Red 600 */
+  --alert-critical-halo:      rgba(220, 38, 38, 0.35);
+
+  /* ============ LAYER 1 · WARNING (Cảnh báo) ============ */
+  --alert-warning-solid:      #f59e0b; /* Amber 500 */
+  --alert-warning-on-solid:   #78350f; /* Amber 900 - Dark text for contrast */
+  --alert-warning-soft:       #fef3c7; /* Amber 100 */
+  --alert-warning-text:       #92400e; /* Amber 800 */
+  --alert-warning-border:     #d97706; /* Amber 600 */
+
+  /* ============ LAYER 1 · INFO (Thông báo - Cobalt / Sky Blue) ============ */
+  /* Decoupled from brand teal/cyan to prevent visual ambiguity with primary CTAs */
+  --alert-info-solid:         #0284c7; /* Sky 600 */
+  --alert-info-on-solid:      #ffffff;
+  --alert-info-soft:          #e0f2fe; /* Sky 100 */
+  --alert-info-text:          #0369a1; /* Sky 700 */
+  --alert-info-border:        #0ea5e9; /* Sky 500 */
+
+  /* ============ LAYER 1 · RESOLVED (Đã kết thúc / All clear) ============ */
+  --alert-resolved-solid:     #15803d; /* Green 700 */
+  --alert-resolved-on-solid:  #ffffff;
+  --alert-resolved-soft:      #dcfce7; /* Green 100 */
+  --alert-resolved-text:      #15803d; /* Green 700 */
+  --alert-resolved-border:    #16a34a; /* Green 600 */
+
+  /* ============ MODIFIER · DRILL (Diễn tập) ============ */
+  --alert-drill-text:          #0f172a; /* Slate 900 */
+  --alert-drill-border:        #94a3b8; /* Slate 400 */
+  --alert-drill-surface:       repeating-linear-gradient(135deg, #f8fafc 0, #f8fafc 12px, #e2e8f0 12px, #e2e8f0 24px);
+  --alert-drill-badge-bg:      #ffffff;
+  --alert-drill-badge-text:    #0f172a;
+
+  /* ============ LAYER 2 · CATEGORY BADGES (NEUTRAL ONLY) ============ */
+  /* Category icons (Medical, Security, Facility) are purely descriptive and carry NO color hue */
+  --alert-category-badge-bg:     rgba(255, 255, 255, 0.22);
+  --alert-category-badge-text:   currentColor;
+  --alert-category-badge-border: rgba(255, 255, 255, 0.4);
+
+  /* ============ MOTION & ACCESSIBILITY ============ */
+  --alert-pulse-duration:     1200ms; /* ~0.83 Hz - safely below WCAG 2.3.1 3 Hz limit */
+  --alert-pulse-ease:         cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes hiu-alert-pulse {
+  0%   { box-shadow: 0 0 0 0 var(--alert-critical-halo); }
+  70%  { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+/* Pulse animation only applies to active, unacknowledged critical emergencies */
+.hiu-alert-pulse {
+  animation: hiu-alert-pulse var(--alert-pulse-duration) var(--alert-pulse-ease) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hiu-alert-pulse {
+    animation: none !important;
+    box-shadow: 0 0 0 3px var(--alert-critical-halo);
+  }
+}
+
+/* ============ MULTI-TENANT HEADER COMPONENT ============ */
+.emr-tenant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--crm-header-h, 64px);
+  padding: 0 var(--crm-space-24, 24px);
+  background: var(--tenant-header-bg);
+  border-bottom: 3px solid var(--tenant-header-accent);
+  box-shadow: var(--crm-shadow-sm);
+}
+.emr-tenant-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.emr-tenant-logo {
+  max-height: var(--tenant-logo-max-h);
+  width: auto;
+  object-fit: contain;
+}
+.emr-tenant-title {
+  font-family: var(--font-heading, "Plus Jakarta Sans", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--crm-text-heading);
+}
+.emr-tenant-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--crm-neutral-100);
+  color: var(--crm-text-muted);
+}
+
+/* ============ EMERGENCY ALERT BANNER COMPONENT ============ */
+.hiu-emergency-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  border-radius: var(--crm-radius-8, 8px);
+  margin-bottom: 12px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-body, "Lexend", sans-serif);
+}
+
+.hiu-emergency-banner[data-severity="critical"] {
+  background: var(--alert-critical-solid);
+  color: var(--alert-critical-on-solid);
+}
+.hiu-emergency-banner[data-severity="warning"] {
+  background: var(--alert-warning-solid);
+  color: var(--alert-warning-on-solid);
+}
+.hiu-emergency-banner[data-severity="info"] {
+  background: var(--alert-info-solid);
+  color: var(--alert-info-on-solid);
+}
+.hiu-emergency-banner[data-severity="resolved"] {
+  background: var(--alert-resolved-solid);
+  color: var(--alert-resolved-on-solid);
+}
+.hiu-emergency-banner[data-drill="true"] {
+  background: var(--alert-drill-surface);
+  color: var(--alert-drill-text);
+  border: 1px dashed var(--alert-drill-border);
+}
+
+/* Layer 2 Neutral Icon Badge */
+.hiu-alert-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--alert-category-badge-bg);
+  border: 1px solid var(--alert-category-badge-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.hiu-emergency-banner[data-drill="true"] .hiu-alert-icon-badge {
+  background: #ffffff;
+  border-color: var(--alert-drill-border);
+  color: var(--alert-drill-text);
+}
+.hiu-emergency-banner[data-severity="warning"] .hiu-alert-icon-badge {
+  background: rgba(120, 53, 15, 0.12);
+  border-color: rgba(120, 53, 15, 0.25);
+  color: var(--alert-warning-on-solid);
+}
+
+/* Content Layout */
+.hiu-alert-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.hiu-alert-header-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.hiu-alert-code-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 1px 7px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.hiu-alert-drill-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 1px 8px;
+  border-radius: 4px;
+  background: var(--alert-drill-badge-bg);
+  color: var(--alert-drill-badge-text);
+  border: 1px solid var(--alert-drill-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.hiu-alert-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.hiu-alert-meta {
+  font-size: 12px;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hiu-alert-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.hiu-alert-status {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Action Button */
+.hiu-alert-action-btn {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: none;
+  transition: background 0.15s var(--crm-ease-standard);
+}
+.hiu-alert-action-btn:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.hiu-emergency-banner[data-severity="warning"] .hiu-alert-action-btn {
+  background: rgba(120, 53, 15, 0.2);
+  color: var(--alert-warning-on-solid);
+}
+.hiu-emergency-banner[data-severity="warning"] .hiu-alert-action-btn:hover {
+  background: rgba(120, 53, 15, 0.3);
+}
+.hiu-emergency-banner[data-drill="true"] .hiu-alert-action-btn {
+  background: #ffffff;
+  color: var(--alert-drill-text);
+  border: 1px solid var(--alert-drill-border);
+}
+

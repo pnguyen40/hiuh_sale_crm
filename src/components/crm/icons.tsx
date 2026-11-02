@@ -5,7 +5,8 @@ import {
   BookmarkPlus, SearchX, CornerDownRight, LayoutDashboard, Users, Contact, History, Filter, Upload,
   Phone, MessageSquare, Mail, Pencil, NotebookPen, Ban, CheckSquare, Square, CircleDot, Circle,
   RotateCcw, ArrowLeftRight, Handshake, Megaphone, Zap, CalendarPlus, BadgeCheck, ShieldCheck,
-  Award, Menu, Sparkles, MousePointerClick, UserCog, Briefcase, Check, type LucideIcon,
+  Award, Menu, Sparkles, MousePointerClick, UserCog, Briefcase, Check,
+  Headset, Inbox, Bot, type LucideIcon,
 } from "lucide-react";
 
 /** Maps the prototype's legacy icon names to Lucide icons. */
@@ -25,6 +26,7 @@ const MAP: Record<string, LucideIcon> = {
   calendar_add_on: CalendarPlus, verified: BadgeCheck, verified_user: ShieldCheck, workspace_premium: Award,
   fiber_new: Sparkles, touch_app: MousePointerClick, manage_accounts: UserCog, assignment_ind: Briefcase,
   menu: Menu, add_business: Building2, domain_add: Building2, done: Check,
+  headset: Headset, inbox: Inbox, bot: Bot, smart_toy: Bot, file_text: FileText,
 };
 
 export function Ic({ n, className, style }: { n?: string; className?: string; style?: React.CSSProperties }) {

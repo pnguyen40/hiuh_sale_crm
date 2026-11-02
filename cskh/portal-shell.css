@@ -1,0 +1,29 @@
+/* Portal shell copied from actual CRM_repo; scoped to the CSKH clone. */
+.crm-10{flex:1}
+.crm-17{display:flex;align-items:center;gap:10px;height:36px;padding:0 10px;margin-top:4px;border-radius:8px;background:#EEF3FD;color:var(--brand-primary);font-weight:600}
+.crm-17 { background: #EEF3FD !important; color: var(--brand-primary, #0052D7) !important; border-radius: 8px !important; }
+.crm-18{font-size:19px;color:var(--brand-primary)}
+.crm-18 { color: var(--brand-primary, #0052D7) !important; }
+.crm-19{flex:1;font-weight:600}
+.crm-2{width:248px;flex:none;display:flex;flex-direction:column;background:var(--crm-tone-50);border-right:1px solid var(--border-default)}
+.crm-2 { width: var(--crm-sidebar-w); }
+.crm-21{display:flex;flex-direction:column;gap:2px;padding-left:10px;border-left:2px solid var(--border-default);margin:4px 0 0 20px}
+.crm-22{display:flex;align-items:center;gap:8px;height:34px;padding:0 10px;border-radius:8px;background:var(--crm-bind-0);color:var(--crm-bind-1);font-weight:var(--crm-bind-2);font-size:13px;transition:all .15s ease}
+.crm-23{font-size:18px}
+.crm-23 { color: #ffffff !important; }
+.crm-24{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crm-25{font-size:11px;color:var(--text-subtle);font-weight:500}
+.crm-25 { background: rgba(255, 255, 255, 0.22) !important; color: #ffffff !important; padding: 1px 7px; border-radius: 9999px; font-size: 11px; font-weight: 600; }
+.crm-25 { padding: 1px 6px; border-radius: 9999px; font-size: 11px; }
+.crm-3{height:64px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 16px;border-bottom:1px solid var(--border-default)}
+.crm-4{font-weight:700;font-size:15px;letter-spacing:0;color:var(--brand-primary-deep)}
+.crm-5{font-size:12px;font-weight:500;color:var(--text-muted)}
+.crm-6{flex:1;padding:8px 8px 16px;display:flex;flex-direction:column;gap:2px;overflow:auto}
+.crm-7{padding:10px 10px 4px;font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0}
+.crm-8{display:flex;align-items:center;gap:10px;height:34px;padding:0 10px;border-radius: 8px;color:var(--text-strong)}
+.crm-9{font-size:20px;color:var(--text-muted)}
+.crm-user-avatar { width: 32px; height: 32px; border-radius: 8px; background: var(--brand-primary); color: #ffffff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex: none; }
+.crm-user-footer { margin-top: auto; padding: 12px 14px; border-top: 1px solid var(--border-default); display: flex; align-items: center; gap: 10px; background: #ffffff; }
+.crm-user-meta { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+.crm-user-name { font-size: 13px; font-weight: 600; color: var(--text-strong); }
+.crm-user-role { font-size: 11px; color: var(--text-muted); }

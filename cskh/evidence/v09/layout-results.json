@@ -1,0 +1,331 @@
+[
+  {
+    "name": "log-mobile",
+    "path": "index.html?frame=M-50",
+    "dpr": 1,
+    "headings": [
+      "CSKH log"
+    ],
+    "height": 844,
+    "main": {
+      "height": 732,
+      "scrollHeight": 1023,
+      "scrollTop": 291.5
+    },
+    "overflow": 0,
+    "table": {
+      "height": 422,
+      "width": 358
+    },
+    "width": 390,
+    "pass": true
+  },
+  {
+    "name": "ai-log-1440",
+    "path": "ai-log.html?scenario=human",
+    "dpr": 1,
+    "headings": [
+      "CS-DEMO-D4658C0F"
+    ],
+    "height": 900,
+    "main": {
+      "height": 772,
+      "scrollHeight": 772,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": null,
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "name": "ai-log-390",
+    "path": "ai-log.html?scenario=invalid",
+    "dpr": 1,
+    "headings": [
+      "CS-DEMO-BE2017B5"
+    ],
+    "height": 844,
+    "main": {
+      "height": 732,
+      "scrollHeight": 732,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": null,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "name": "ai-log-profile-390",
+    "path": "ai-log.html?scenario=invalid",
+    "dpr": 1,
+    "headings": [
+      "CS-DEMO-2B9D0709"
+    ],
+    "height": 844,
+    "main": {
+      "height": 732,
+      "scrollHeight": 732,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": null,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "name": "customer-390",
+    "path": "customer-chat.html?scenario=validation",
+    "dpr": 1,
+    "headings": [
+      "Trợ lý HIUH"
+    ],
+    "height": 844,
+    "main": {
+      "height": 790,
+      "scrollHeight": 790,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": null,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "name": "team-1920",
+    "path": "index.html?frame=M-03",
+    "checkedAt": "2026-11-02T07:27:04.878Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 1080,
+    "main": {
+      "height": 952,
+      "scrollHeight": 952,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 464,
+      "width": 1600
+    },
+    "width": 1920,
+    "pass": true
+  },
+  {
+    "name": "team-1440",
+    "path": "index.html?frame=M-03",
+    "checkedAt": "2026-11-02T07:27:06.298Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 900,
+    "main": {
+      "height": 772,
+      "scrollHeight": 792,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 260,
+      "width": 1120
+    },
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "name": "ai-previews-1440",
+    "path": "index.html?frame=M-48",
+    "checkedAt": "2026-11-02T07:27:07.441Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 900,
+    "main": {
+      "height": 772,
+      "scrollHeight": 846,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 260,
+      "width": 1120
+    },
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "name": "recent-1280",
+    "path": "index.html?frame=M-47",
+    "checkedAt": "2026-11-02T07:27:08.608Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 800,
+    "main": {
+      "height": 672,
+      "scrollHeight": 846,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 260,
+      "width": 960
+    },
+    "width": 1280,
+    "pass": true
+  },
+  {
+    "name": "team-tablet",
+    "path": "index.html?frame=M-03",
+    "checkedAt": "2026-11-02T07:27:09.764Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 1024,
+    "main": {
+      "height": 904,
+      "scrollHeight": 904,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 372,
+      "width": 712
+    },
+    "width": 768,
+    "pass": true
+  },
+  {
+    "name": "queue-mobile-390",
+    "path": "index.html?frame=M-40",
+    "checkedAt": "2026-11-02T07:27:10.890Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 844,
+    "main": {
+      "height": 732,
+      "scrollHeight": 1234,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 380,
+      "width": 358
+    },
+    "width": 390,
+    "pass": true
+  },
+  {
+    "name": "queue-mobile-table",
+    "path": "index.html?frame=M-40",
+    "checkedAt": "2026-11-02T07:27:12.152Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 844,
+    "main": {
+      "height": 732,
+      "scrollHeight": 1234,
+      "scrollTop": 501.5
+    },
+    "overflow": 0,
+    "table": {
+      "height": 380,
+      "width": 358
+    },
+    "width": 390,
+    "pass": true
+  },
+  {
+    "name": "filter-mobile-360",
+    "path": "index.html?frame=M-51",
+    "checkedAt": "2026-11-02T07:27:13.433Z",
+    "dpr": 1,
+    "headings": [
+      "Tiếp nhận & Xử lý"
+    ],
+    "height": 800,
+    "main": {
+      "height": 688,
+      "scrollHeight": 1377,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 360,
+      "width": 328
+    },
+    "width": 360,
+    "pass": true
+  },
+  {
+    "name": "tickets-mobile",
+    "path": "index.html?frame=M-49",
+    "checkedAt": "2026-11-02T07:27:14.757Z",
+    "dpr": 1,
+    "headings": [
+      "Phiếu yêu cầu"
+    ],
+    "height": 844,
+    "main": {
+      "height": 732,
+      "scrollHeight": 732,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": {
+      "height": 380,
+      "width": 358
+    },
+    "width": 390,
+    "pass": true
+  },
+  {
+    "name": "review-1440",
+    "path": "review-ai.html",
+    "checkedAt": "2026-11-02T07:27:15.776Z",
+    "dpr": 1,
+    "headings": [
+      "CSKH v0.9 · Tiếp nhận & xử lý"
+    ],
+    "height": 900,
+    "main": {
+      "height": 2313,
+      "scrollHeight": 2313,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": null,
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "name": "review-390",
+    "path": "review-ai.html",
+    "checkedAt": "2026-11-02T07:27:16.744Z",
+    "dpr": 1,
+    "headings": [
+      "CSKH v0.9 · Tiếp nhận & xử lý"
+    ],
+    "height": 844,
+    "main": {
+      "height": 3065,
+      "scrollHeight": 3065,
+      "scrollTop": 0
+    },
+    "overflow": 0,
+    "table": null,
+    "width": 390,
+    "pass": true
+  }
+]

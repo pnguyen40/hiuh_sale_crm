@@ -1,0 +1,31 @@
+import {execFileSync} from 'node:child_process';import {writeFileSync,readFileSync} from 'node:fs';
+const BASE='http://127.0.0.1:4802/CSKH/prototype-portal-v0.9.0/',out=new URL('../evidence/v09/',import.meta.url).pathname;
+const ab=(...args)=>{const j=JSON.parse(execFileSync('agent-browser',['--session','ab-hiuh-ai-1102','--json',...args],{encoding:'utf8',maxBuffer:4e6,timeout:20000}));if(!j.success)throw Error(j.error);return j.data;};
+const ev=body=>ab('eval','-b',Buffer.from(`(()=>{${body}})()`).toString('base64')).result;
+const rows=[];ab('tab','t10');
+function capture(name,path,w,h,action=''){
+ if(process.env.ONLY&&!process.env.ONLY.split(',').includes(name))return;
+ ab('set','viewport',String(w),String(h),'1');ab('open',BASE+path);
+ if(path.startsWith('index'))ab('wait','--fn','!!window.CSKH?.ready');else if(path.startsWith('ai-log'))ab('wait','--fn','!!window.HIUH_LOG');else if(path.startsWith('customer-chat'))ab('wait','--fn','!!window.HIUH_CHAT');
+ if(action)ev(action);
+ const result=ev(`const q=s=>document.querySelector(s),r=s=>q(s)?.getBoundingClientRect();const main=q('main'),table=q('.table-panel');return {width:innerWidth,height:innerHeight,dpr:devicePixelRatio,overflow:document.documentElement.scrollWidth-innerWidth,main:main?{height:Math.round(r('main').height),scrollHeight:main.scrollHeight,scrollTop:main.scrollTop}:null,table:table?{height:Math.round(r('.table-panel').height),width:Math.round(r('.table-panel').width)}:null,headings:[...document.querySelectorAll('h1')].map(e=>e.textContent)};`);
+ ab('screenshot',out+name+'.png');rows.push({name,path,checkedAt:new Date().toISOString(),...result,pass:result.overflow===0&&result.width===w});console.log(name,result.width,result.height,result.overflow);
+}
+capture('team-1920','index.html?frame=M-03',1920,1080);
+capture('team-1440','index.html?frame=M-03',1440,900);
+capture('ai-previews-1440','index.html?frame=M-48',1440,900);
+capture('recent-1280','index.html?frame=M-47',1280,800);
+capture('team-tablet','index.html?frame=M-03',768,1024);
+capture('queue-mobile-390','index.html?frame=M-40',390,844);
+capture('queue-mobile-table','index.html?frame=M-40',390,844,"document.querySelector('.table-panel').scrollIntoView({block:'center'});document.querySelector('.table-scroll').scrollLeft=200;");
+capture('filter-mobile-360','index.html?frame=M-51',360,800,"document.querySelector('[data-filter-trigger=topic]').click();");
+capture('tickets-mobile','index.html?frame=M-49',390,844,"document.querySelector('.ticket-layout').scrollIntoView({block:'center'});");
+capture('log-mobile','index.html?frame=M-50',390,844,"document.querySelector('.log-layout').scrollIntoView({block:'center'});");
+capture('ai-log-1440','ai-log.html?scenario=human',1440,900);
+capture('ai-log-390','ai-log.html?scenario=invalid',390,844);
+capture('ai-log-profile-390','ai-log.html?scenario=invalid',390,844,"document.querySelector('[data-cmd=panel][data-panel=identity]').click();");
+capture('customer-390','customer-chat.html?scenario=validation',390,844);
+capture('review-1440','review-ai.html',1440,900);
+capture('review-390','review-ai.html',390,844);
+ab('set','viewport','1440','900','1');ab('open',BASE+'review-ai.html');
+const previous=process.env.ONLY?JSON.parse(readFileSync(out+'layout-results.json','utf8')).filter(x=>!rows.some(r=>r.name===x.name)):[];writeFileSync(out+'layout-results.json',JSON.stringify([...previous,...rows],null,2)+'\n');if(rows.some(x=>!x.pass))process.exitCode=1;

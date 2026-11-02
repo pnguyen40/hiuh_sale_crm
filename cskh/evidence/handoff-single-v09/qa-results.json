@@ -1,0 +1,490 @@
+{
+  "checkedAt": "2026-11-02T08:36:29.441Z",
+  "file": "/Users/phongnguyen/workspace/Nexlab/docs-ba/CSKH/handoff/CSKH-Operation-Portal-v0.9.0.html",
+  "sha256": "a56e5bfbd603d2c361508e5007cc4239174c8e01fe90d69611377c026ba05628",
+  "method": "agent-browser isolated Chromium; file://; offline mode; native controls plus read-only DOM/model inspection; 51 frames render check is not full workflow coverage",
+  "pass": true,
+  "results": [
+    {
+      "name": "All CSS imports, local images and fonts are embedded",
+      "pass": true,
+      "detail": {
+        "bad": [],
+        "assets": 20
+      }
+    },
+    {
+      "name": "BRD embedded byte-for-byte",
+      "pass": true
+    },
+    {
+      "name": "Offline route: review",
+      "pass": true,
+      "detail": {
+        "bodyLength": 3827,
+        "fonts": "loaded",
+        "heading": "CSKH v0.9 · Tiếp nhận & xử lý",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "review",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: portal",
+      "pass": true,
+      "detail": {
+        "bodyLength": 6093,
+        "fonts": "loaded",
+        "heading": "Tiếp nhận & Xử lý",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "portal",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: customer",
+      "pass": true,
+      "detail": {
+        "bodyLength": 1086,
+        "fonts": "loaded",
+        "heading": "Trợ lý HIUH",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "customer",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: staff",
+      "pass": true,
+      "detail": {
+        "bodyLength": 3197,
+        "fonts": "loaded",
+        "heading": "CS-DEMO-E6DB1034",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "staff",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: frames",
+      "pass": true,
+      "detail": {
+        "bodyLength": 2633,
+        "fonts": "loaded",
+        "heading": "CSKH v0.9.0 — các luồng review",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "frames",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: brd",
+      "pass": true,
+      "detail": {
+        "bodyLength": 128423,
+        "fonts": "loaded",
+        "heading": "BRD CSKH v0.9.0 — Phiên vừa hết, câu hội thoại cuối và bộ lọc chọn nhiều",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "brd",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: guide",
+      "pass": true,
+      "detail": {
+        "bodyLength": 5030,
+        "fonts": "loaded",
+        "heading": "CSKH prototype v0.9",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "guide",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: design",
+      "pass": true,
+      "detail": {
+        "bodyLength": 3421,
+        "fonts": "loaded",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "design",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: qa",
+      "pass": true,
+      "detail": {
+        "bodyLength": 3413,
+        "fonts": "loaded",
+        "heading": "Kiểm chứng prototype CSKH v0.9",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "qa",
+        "errors": []
+      }
+    },
+    {
+      "name": "Offline route: aiDesign",
+      "pass": true,
+      "detail": {
+        "bodyLength": 5863,
+        "fonts": "loaded",
+        "heading": "AI chat và AI log — đặc tả thiết kế v0.8",
+        "network": [],
+        "offline": true,
+        "overflow": 0,
+        "surface": "aiDesign",
+        "errors": []
+      }
+    },
+    {
+      "name": "51 Portal frames render in the single file",
+      "pass": true,
+      "detail": [
+        {
+          "id": "M-01",
+          "rendered": true
+        },
+        {
+          "id": "M-02",
+          "rendered": true
+        },
+        {
+          "id": "M-03",
+          "rendered": true
+        },
+        {
+          "id": "M-04",
+          "rendered": true
+        },
+        {
+          "id": "M-05",
+          "rendered": true
+        },
+        {
+          "id": "M-06",
+          "rendered": true
+        },
+        {
+          "id": "M-07",
+          "rendered": true
+        },
+        {
+          "id": "M-08",
+          "rendered": true
+        },
+        {
+          "id": "M-09",
+          "rendered": true
+        },
+        {
+          "id": "M-10",
+          "rendered": true
+        },
+        {
+          "id": "M-11",
+          "rendered": true
+        },
+        {
+          "id": "M-12",
+          "rendered": true
+        },
+        {
+          "id": "M-13",
+          "rendered": true
+        },
+        {
+          "id": "M-14",
+          "rendered": true
+        },
+        {
+          "id": "M-15",
+          "rendered": true
+        },
+        {
+          "id": "M-16",
+          "rendered": true
+        },
+        {
+          "id": "M-17",
+          "rendered": true
+        },
+        {
+          "id": "M-18",
+          "rendered": true
+        },
+        {
+          "id": "M-19",
+          "rendered": true
+        },
+        {
+          "id": "M-20",
+          "rendered": true
+        },
+        {
+          "id": "M-21",
+          "rendered": true
+        },
+        {
+          "id": "M-22",
+          "rendered": true
+        },
+        {
+          "id": "M-23",
+          "rendered": true
+        },
+        {
+          "id": "M-24",
+          "rendered": true
+        },
+        {
+          "id": "M-25",
+          "rendered": true
+        },
+        {
+          "id": "M-26",
+          "rendered": true
+        },
+        {
+          "id": "M-27",
+          "rendered": true
+        },
+        {
+          "id": "M-28",
+          "rendered": true
+        },
+        {
+          "id": "M-29",
+          "rendered": true
+        },
+        {
+          "id": "M-30",
+          "rendered": true
+        },
+        {
+          "id": "M-31",
+          "rendered": true
+        },
+        {
+          "id": "M-32",
+          "rendered": true
+        },
+        {
+          "id": "M-33",
+          "rendered": true
+        },
+        {
+          "id": "M-34",
+          "rendered": true
+        },
+        {
+          "id": "M-35",
+          "rendered": true
+        },
+        {
+          "id": "M-36",
+          "rendered": true
+        },
+        {
+          "id": "M-37",
+          "rendered": true
+        },
+        {
+          "id": "M-38",
+          "rendered": true
+        },
+        {
+          "id": "M-39",
+          "rendered": true
+        },
+        {
+          "id": "M-40",
+          "rendered": true
+        },
+        {
+          "id": "M-41",
+          "rendered": true
+        },
+        {
+          "id": "M-42",
+          "rendered": true
+        },
+        {
+          "id": "M-43",
+          "rendered": true
+        },
+        {
+          "id": "M-44",
+          "rendered": true
+        },
+        {
+          "id": "M-45",
+          "rendered": true
+        },
+        {
+          "id": "M-46",
+          "rendered": true
+        },
+        {
+          "id": "M-47",
+          "rendered": true
+        },
+        {
+          "id": "M-48",
+          "rendered": true
+        },
+        {
+          "id": "M-49",
+          "rendered": true
+        },
+        {
+          "id": "M-50",
+          "rendered": true
+        },
+        {
+          "id": "M-51",
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "name": "DS typography and last-message column preserved",
+      "pass": true,
+      "detail": {
+        "body": "Lexend, ui-sans-serif, system-ui, sans-serif",
+        "color": "rgb(22, 32, 92)",
+        "columns": [
+          "Mã yêu cầu",
+          "Nguồn",
+          "Người liên hệ",
+          "Chủ đề",
+          "Câu hội thoại cuối cùng",
+          "Trạng thái",
+          "Phụ trách",
+          "Tiếp nhận",
+          "Hẹn theo dõi",
+          "Thao tác"
+        ],
+        "heading": "\"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif"
+      }
+    },
+    {
+      "name": "Native multi-select works offline and keeps menu open",
+      "pass": true,
+      "detail": {
+        "open": true,
+        "selected": [
+          "dat-lich",
+          "tu-van-goi"
+        ],
+        "topics": [
+          "Đặt lịch khám",
+          "Tư vấn gói khám"
+        ]
+      }
+    },
+    {
+      "name": "Recent-expiry frame uses the 15-minute filter",
+      "pass": true,
+      "detail": {
+        "badges": [
+          "Phiên vừa hết trong 15'",
+          "Phiên vừa hết trong 15'",
+          "Phiên vừa hết trong 15'",
+          "Phiên vừa hết trong 15'",
+          "Phiên vừa hết trong 15'",
+          "Phiên vừa hết trong 15'"
+        ],
+        "rows": 6
+      }
+    },
+    {
+      "name": "Ticket data present in exported file",
+      "pass": true,
+      "detail": {
+        "rows": 20,
+        "text": "Phiếu yêu cầu\n\nTheo dõi công việc cần thụ lý sau · liên kết với ca tiếp nhận\n\nTìm phiếu\nTrạng thái\nƯu tiên\nĐơn vị thụ lý\n25 phiếu trong phạm vi được xem\nXóa lọc\nMã phiếu / Ca nguồn\tLoại yêu cầu\tƯu tiên\tĐơn vị\tTrạng thái\tHạn xử lý\nREQ-MOCK-0001\nCS-EX-001\n\tĐặt hẹn chuyên khoa\tCao\tĐội Đặt hẹn\tMới\t14:36 02/11/2026\nQuá hạn xử lý\n\nREQ-MOCK-0002\nCS-EX-002\n\tBảo lãnh viện phí\tThường\tTài chính kế toán\tĐang xử lý\t17:36 02/11/2026\nREQ-MOCK-0003\nCS-EX-003\n\tCấp trích sao bệnh án\tThấp\tKế hoạch tổng hợp\tChờ phả",
+        "title": "Phiếu yêu cầu"
+      }
+    },
+    {
+      "name": "CSKH log renders offline",
+      "pass": true
+    },
+    {
+      "name": "Two-tab public exchange from manual UI run persisted",
+      "pass": true,
+      "detail": {
+        "caseId": "CS-DEMO-EB5222F9",
+        "customerReply": true,
+        "owner": "Mai Anh",
+        "sameSession": true,
+        "staffReply": true
+      }
+    },
+    {
+      "name": "Desktop/mobile: no page overflow, launcher does not cover mobile controls",
+      "pass": true,
+      "detail": [
+        {
+          "width": 1440,
+          "height": 900,
+          "surface": "portal",
+          "fonts": "loaded",
+          "home": 0,
+          "launcherVisible": true,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "surface": "staff",
+          "fonts": "loaded",
+          "home": 0,
+          "launcherVisible": true,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "surface": "customer",
+          "fonts": "loaded",
+          "launcherVisible": false,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "surface": "portal",
+          "fonts": "loaded",
+          "home": 44,
+          "launcherVisible": false,
+          "overflow": 0
+        }
+      ]
+    },
+    {
+      "name": "Handoff navigation opens",
+      "pass": true
+    }
+  ]
+}

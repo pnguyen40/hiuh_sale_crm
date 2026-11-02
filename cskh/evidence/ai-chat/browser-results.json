@@ -1,0 +1,157 @@
+{
+  "method": "Chrome Debug CDP 9222 · agent-browser 0.27 · native fill, DOM click/submit through UI controls",
+  "tests": [
+    {
+      "name": "Khách: thông báo VI, đúng link chính sách, fallback VI",
+      "pass": true,
+      "detail": {
+        "consent": null,
+        "href": "https://hiuhospital.com/chinh-sach-bao-mat",
+        "locale": "vi",
+        "notice": "Nội dung trò chuyện và thông tin bạn cung cấp sẽ được thu thập để hỗ trợ bạn. Chính sách bảo mật."
+      }
+    },
+    {
+      "name": "Khách: form trống cảnh báo cả hai trường, vẫn được bàn giao",
+      "pass": true,
+      "detail": {
+        "codes": [
+          "Bạn chưa nhập họ tên. Nhân viên sẽ hỏi lại khi kết nối.",
+          "Bạn chưa nhập số điện thoại. Nhân viên chưa có số để liên hệ lại."
+        ],
+        "locked": true,
+        "sid": "AI-WEB-C65766DC",
+        "warnings": [
+          "ERR_NAME_EMPTY",
+          "ERR_PHONE_EMPTY"
+        ]
+      }
+    },
+    {
+      "name": "CSKH: trước nhận chỉ metadata; nhận ca, bắt đầu, tiếp quản",
+      "pass": true,
+      "detail": {
+        "afterClaim": "NEW",
+        "before": true,
+        "state": "HUMAN_ACTIVE",
+        "warning": true
+      }
+    },
+    {
+      "name": "CSKH: gửi tin công khai, không gia hạn thời gian khách",
+      "pass": true,
+      "detail": {
+        "after": 1793604568230,
+        "before": 1793604568230
+      }
+    },
+    {
+      "name": "Hai phía: nhận tin nhân viên và gửi phản hồi khách đúng phiên",
+      "pass": true,
+      "detail": {
+        "received": true,
+        "sid": "AI-WEB-C65766DC"
+      }
+    },
+    {
+      "name": "Ghi chú nội bộ tách khỏi kênh công khai",
+      "pass": true,
+      "detail": {
+        "leaked": false,
+        "notes": 1
+      }
+    },
+    {
+      "name": "Khách không đọc được ghi chú; lỗi gửi giữ nháp rồi thử lại được",
+      "pass": true,
+      "detail": {
+        "count": 1,
+        "leaked": false,
+        "retained": "Nháp giữ khi gửi lỗi"
+      }
+    },
+    {
+      "name": "Refresh giữ phiên, lịch sử và khóa quay lại AI",
+      "pass": true,
+      "detail": {
+        "checked": "true",
+        "hasMessage": true,
+        "id": "AI-WEB-C65766DC",
+        "locked": true,
+        "phase": "HUMAN_ACTIVE"
+      }
+    },
+    {
+      "name": "English: bản dịch lỗi/form, thông báo vẫn có VI",
+      "pass": true,
+      "detail": {
+        "continue": "Connect anyway",
+        "error": "The phone number does not contain 10 digits. Edit it or continue for help.",
+        "lang": "en",
+        "notice": "Nội dung trò chuyện và thông tin bạn cung cấp sẽ được thu thập để hỗ trợ bạn. Chính sách bảo mật.\nYour conversation and the information you provide will be collected to support you. Privacy policy."
+      }
+    },
+    {
+      "name": "Countdown: cảnh báo và tiếp tục chủ động gia hạn",
+      "pass": true,
+      "detail": {
+        "hasWarning": true,
+        "seconds": 600,
+        "text": "10:00"
+      }
+    },
+    {
+      "name": "Hết phiên: giữ nháp, khóa gửi; phiên mới tách ID và giữ nháp",
+      "pass": true,
+      "detail": {
+        "disabled": true,
+        "newDraft": "Nháp trước hết phiên",
+        "newId": "AI-WEB-57BFF92E",
+        "oldId": "AI-WEB-1E5A2CEE",
+        "retained": "Nháp trước hết phiên"
+      }
+    },
+    {
+      "name": "Mất kết nối: giữ hạn, reconnect không tự bật AI",
+      "pass": true,
+      "detail": {
+        "after": 1793604577177,
+        "before": 1793604577177,
+        "disabled": true,
+        "locked": true
+      }
+    },
+    {
+      "name": "Log một phần / không tải được không bịa dữ liệu, có retry",
+      "pass": true,
+      "detail": {
+        "partial": "Một phần",
+        "summaryAbsent": true,
+        "transcriptAbsent": true
+      }
+    },
+    {
+      "name": "CSKH: bổ sung liên hệ giữ bản gốc, cần lý do khi sửa",
+      "pass": true,
+      "detail": {
+        "after": "090 123",
+        "care": "0900000001",
+        "history": 1,
+        "original": "090 123",
+        "reasonError": "Ghi lý do khi sửa thông tin đã có."
+      }
+    },
+    {
+      "name": "Thu quyền gỡ transcript, thông tin và nháp",
+      "pass": true,
+      "detail": {
+        "draft": false,
+        "identity": false,
+        "notice": true,
+        "stream": false
+      }
+    }
+  ],
+  "total": 15,
+  "passed": 15
+}

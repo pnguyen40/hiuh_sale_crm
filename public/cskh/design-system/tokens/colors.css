@@ -1,0 +1,85 @@
+:root {
+  /* Brand primary ramp */
+  --crm-shader-fallback: linear-gradient(115deg, var(--crm-primary-100), var(--crm-info-100) 55%, var(--crm-primary-300));
+  --crm-shader-fade: linear-gradient(to bottom, oklch(1 0 0) 0%, oklch(1 0 0 / 65%) 48%, transparent 100%);
+  --crm-shader-header: color-mix(in srgb, var(--crm-bg-surface) 80%, transparent);
+  --crm-primary-50: #eef3fd;
+  --crm-primary-100: #dbe7fb;
+  --crm-primary-200: #c2d8f7;
+  --crm-primary-300: #6f9fe8;
+  --crm-primary-400: #4f8ae6;
+  --crm-primary-500: #0052d7;
+  --crm-primary-600: #0052d7;
+  --crm-primary-700: #0044b3;
+  --crm-primary-800: #00337f;
+  --crm-primary-900: #16205c;
+
+  /* Neutral ramp (cool-blue tinted, no flat gray) */
+  --crm-neutral-0: #ffffff;
+  --crm-neutral-50: #f6f8fd;
+  --crm-neutral-100: #eef1f9;
+  --crm-neutral-200: #e1e5f2;
+  --crm-neutral-300: #c7cce0;
+  --crm-neutral-400: #9aa2c4;
+  --crm-neutral-500: #6e7699;
+  --crm-neutral-600: #525a7d;
+  --crm-neutral-700: #3b4177;
+  --crm-neutral-800: #232a4d;
+  --crm-neutral-900: #21286a;
+  --crm-neutral-ink: #171f5b;
+
+  /* Status roles: 100 / 500 / text */
+  --crm-success-100: #dcfce7;
+  --crm-success-500: #22c55e;
+  --crm-success-text: #15803d;
+  --crm-warning-100: #fef3c7;
+  --crm-warning-500: #f59e0b;
+  --crm-warning-text: #92400e;
+  --crm-error-100: #fee2e2;
+  --crm-error-500: #ef4444;
+  --crm-error-text: #b91c1c;
+  --crm-info-100: #e0f2fe;
+  --crm-info-500: #0ea5e9;
+  --crm-info-text: #0369a1;
+
+  /* B2B accent */
+  --crm-teal: #1b7e93;
+
+  /* Semantic surfaces / text / borders */
+  --crm-bg-page: var(--crm-neutral-50);
+  --crm-bg-surface: #ffffff;
+  --crm-text-heading: #16205c;
+  --crm-text-body: #3b4177;
+  --crm-text-muted: #6e7699;
+  --crm-text-strong: #171f5b;
+  --crm-border-subtle: #e8eef7;
+  --crm-border-default: #c7cce0;
+  --crm-field-bg: #fafafa;
+  --crm-field-border: #e5e5e5;
+  --crm-field-text: #262626;
+  --crm-focus-ring: 0 0 0 3px rgba(0, 82, 215, 0.28);
+
+  /* Radii — .hiu-portal set, only these 6 values are allowed */
+  --crm-radius-8: 8px;
+  --crm-radius-12: 12px;
+  --crm-radius-14: 14px;
+  --crm-radius-16: 16px;
+  --crm-radius-20: 20px;
+  --crm-radius-pill: 999px;
+
+  /* Shadows — soft, cool-tinted */
+  --crm-shadow-sm: 0 2px 8px rgba(14, 19, 32, 0.05);
+  --crm-shadow-md: 0 3px 12px rgba(14, 19, 32, 0.05);
+  --crm-shadow-lg: 0 8px 24px rgba(14, 19, 32, 0.07);
+
+  /* Motion */
+  --crm-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --crm-dur-fast: 120ms;
+  --crm-dur-normal: 200ms;
+  --crm-dur-slow: 320ms;
+
+  /* Layout */
+  --crm-sidebar-w: 264px;
+  --crm-header-h: 64px;
+}
+

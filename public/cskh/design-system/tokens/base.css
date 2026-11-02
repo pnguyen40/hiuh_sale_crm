@@ -1,0 +1,6 @@
+.crm-root { margin: 0; background: var(--crm-bg-page); line-height: var(--crm-line-body); -webkit-font-smoothing: antialiased; }
+.crm-root *, .crm-root *::before, .crm-root *::after { box-sizing: border-box; }
+.crm-root button, .crm-root input, .crm-root select, .crm-root textarea { font: inherit; }
+.crm-root button { cursor: pointer; }
+.crm-root *:focus-visible { outline: none; box-shadow: var(--crm-focus-ring); border-radius: var(--crm-control-radius); }
+.crm-root table { border-collapse: separate; border-spacing: 0; }

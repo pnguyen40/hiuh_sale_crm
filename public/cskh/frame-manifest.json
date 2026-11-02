@@ -1,0 +1,307 @@
+{
+  "version": "0.7.0",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "screens": [
+    "C-01",
+    "C-02",
+    "C-03",
+    "C-04"
+  ],
+  "overlays": [
+    "D-01",
+    "D-02",
+    "D-03",
+    "D-04",
+    "D-05",
+    "D-06",
+    "D-07",
+    "D-08",
+    "D-09",
+    "D-10",
+    "D-11"
+  ],
+  "frame_count": 46,
+  "frames": [
+    {
+      "frame_id": "M-01",
+      "surface": "C-01",
+      "state_id": "WAITING_QUEUE",
+      "review_focus": "STAFF Chờ nhận, metadata không tên/số/nội dung; Nhận xử lý"
+    },
+    {
+      "frame_id": "M-02",
+      "surface": "C-01",
+      "state_id": "MY_CASES",
+      "review_focus": "STAFF Của tôi, dữ liệu theo quyền, filter có giá trị"
+    },
+    {
+      "frame_id": "M-03",
+      "surface": "C-01",
+      "state_id": "TEAM_CASES",
+      "review_focus": "SUPERVISOR Của nhóm, owner và Giao/Chuyển"
+    },
+    {
+      "frame_id": "M-04",
+      "surface": "C-02",
+      "state_id": "NEW_CUSTOMER",
+      "review_focus": "AI chưa có tên/số; bổ sung liên hệ, không bảng đối chiếu"
+    },
+    {
+      "frame_id": "M-05",
+      "surface": "C-02",
+      "state_id": "CONTACT_NEW_OWNED",
+      "review_focus": "NEW đã nhận, lời nhắn dat-lich vẫn là liên hệ, nút Bắt đầu xử lý"
+    },
+    {
+      "frame_id": "M-06",
+      "surface": "C-02",
+      "state_id": "BOOKING_PENDING",
+      "review_focus": "IN_PROGRESS, chưa sắp bác sĩ, tên bệnh nhân khác người liên hệ"
+    },
+    {
+      "frame_id": "M-07",
+      "surface": "C-02 + D-01",
+      "state_id": "OPTIONAL_DIRECTORY",
+      "review_focus": "Danh bạ tùy chọn; không liên kết tự động"
+    },
+    {
+      "frame_id": "M-08",
+      "surface": "C-02 + D-02",
+      "state_id": "EDIT_CONTACT",
+      "review_focus": "Sửa tên/số/email trong một lần"
+    },
+    {
+      "frame_id": "M-09",
+      "surface": "C-02 + D-03",
+      "state_id": "CHANGE_CATEGORY",
+      "review_focus": "Loại cũ/mới + lý do"
+    },
+    {
+      "frame_id": "M-10",
+      "surface": "C-02 + D-04",
+      "state_id": "TRANSFER",
+      "review_focus": "Supervisor chuyển owner cùng nhóm + lý do"
+    },
+    {
+      "frame_id": "M-11",
+      "surface": "C-02 + D-05",
+      "state_id": "WAIT_INTERNAL",
+      "review_focus": "Chờ phản hồi: nội dung gộp, ngày bắt buộc, giờ tùy chọn"
+    },
+    {
+      "frame_id": "M-12",
+      "surface": "C-02 + D-06",
+      "state_id": "RESOLVE",
+      "review_focus": "Kết quả và nội dung, nguồn lịch kiểm chứng riêng"
+    },
+    {
+      "frame_id": "M-13",
+      "surface": "C-02 + D-07",
+      "state_id": "CANCEL_CASE",
+      "review_focus": "Cảnh báo nghiệp vụ hủy case không hủy lịch"
+    },
+    {
+      "frame_id": "M-14",
+      "surface": "C-02 + D-08",
+      "state_id": "REOPEN_RESOLVED",
+      "review_focus": "Nền RESOLVED, supervisor chọn owner + lý do"
+    },
+    {
+      "frame_id": "M-15",
+      "surface": "C-01",
+      "state_id": "EMPTY_FILTERED",
+      "review_focus": "Không có kết quả và Xóa bộ lọc"
+    },
+    {
+      "frame_id": "M-16",
+      "surface": "C-01",
+      "state_id": "LOAD_ERROR",
+      "review_focus": "Lỗi danh sách, Thử lại, không fake 0 case"
+    },
+    {
+      "frame_id": "M-17",
+      "surface": "C-01",
+      "state_id": "CLAIM_CONFLICT",
+      "review_focus": "Người khác đã nhận; refresh row, không vào chi tiết"
+    },
+    {
+      "frame_id": "M-18",
+      "surface": "C-02 + D-01",
+      "state_id": "SHARED_PHONE",
+      "review_focus": "Nhiều người cùng số, không tự chọn"
+    },
+    {
+      "frame_id": "M-19",
+      "surface": "C-02 + D-02",
+      "state_id": "CORRECT_CONTACT",
+      "review_focus": "Sửa thông tin phải có lý do; giữ bản gốc"
+    },
+    {
+      "frame_id": "M-20",
+      "surface": "C-02",
+      "state_id": "AI_PARTIAL",
+      "review_focus": "Có phần thiếu, log đã có vẫn đọc được"
+    },
+    {
+      "frame_id": "M-21",
+      "surface": "C-02",
+      "state_id": "AI_UNAVAILABLE",
+      "review_focus": "Không đọc được log, Thử tải lại; không chặn các tác vụ hợp lệ khác"
+    },
+    {
+      "frame_id": "M-22",
+      "surface": "C-02",
+      "state_id": "ACCESS_REVOKED",
+      "review_focus": "Ẩn chi tiết/draft nhạy cảm, quay danh sách; không read-only dữ liệu cũ"
+    },
+    {
+      "frame_id": "M-23",
+      "surface": "C-02",
+      "state_id": "BOOKING_CONFIRMED",
+      "review_focus": "Nguồn CONFIRMED + appointment_id, case vẫn IN_PROGRESS"
+    },
+    {
+      "frame_id": "M-24",
+      "surface": "C-02",
+      "state_id": "WAITING_FOLLOWUP",
+      "review_focus": "Chờ khách có việc và mốc theo dõi"
+    },
+    {
+      "frame_id": "M-25",
+      "surface": "C-02",
+      "state_id": "B2B_REQUEST",
+      "review_focus": "Nhu cầu doanh nghiệp chuyển CRM"
+    },
+    {
+      "frame_id": "M-26",
+      "surface": "C-02",
+      "state_id": "PHONE_HISTORY",
+      "review_focus": "Lịch sử cùng số trong quyền, không gộp người"
+    },
+    {
+      "frame_id": "M-27",
+      "surface": "C-02",
+      "state_id": "ASSIST_BOOKING",
+      "review_focus": "Gửi nhu cầu lịch cho khách mới"
+    },
+    {
+      "frame_id": "M-28",
+      "surface": "C-02",
+      "state_id": "CRM_ACCEPTED",
+      "review_focus": "CRM đã nhận, có mã và bên nhận"
+    },
+    {
+      "frame_id": "M-29",
+      "surface": "C-02",
+      "state_id": "HANDOFF_B2B",
+      "review_focus": "Form bàn giao doanh nghiệp"
+    },
+    {
+      "frame_id": "M-30",
+      "surface": "C-01",
+      "state_id": "OVERDUE",
+      "review_focus": "Quá hẹn theo dõi"
+    },
+    {
+      "frame_id": "M-31",
+      "surface": "C-01",
+      "state_id": "SAVE_VIEW",
+      "review_focus": "Lưu cấu hình lọc và sắp xếp"
+    },
+    {
+      "frame_id": "M-32",
+      "surface": "C-03",
+      "state_id": "ACTIVITY_LOG",
+      "review_focus": "CSKH log theo nhóm"
+    },
+    {
+      "frame_id": "M-33",
+      "surface": "C-03",
+      "state_id": "LOG_DETAIL",
+      "review_focus": "Chi tiết trước / sau"
+    },
+    {
+      "frame_id": "M-34",
+      "surface": "C-02",
+      "state_id": "SUMMARY_STALE",
+      "review_focus": "AI summary cần cập nhật theo phiên bản nguồn"
+    },
+    {
+      "frame_id": "M-35",
+      "surface": "C-02",
+      "state_id": "SUMMARY_ERROR",
+      "review_focus": "Lỗi tóm tắt không chặn xử lý"
+    },
+    {
+      "frame_id": "M-36",
+      "surface": "C-02",
+      "state_id": "SUMMARY_EMPTY",
+      "review_focus": "Chưa có AI summary"
+    },
+    {
+      "frame_id": "M-37",
+      "surface": "C-02",
+      "state_id": "SUMMARY_PARTIAL",
+      "review_focus": "Tóm tắt chỉ phần hội thoại đã nhận"
+    },
+    {
+      "frame_id": "M-38",
+      "surface": "C-02",
+      "state_id": "SUMMARY_UNAVAILABLE",
+      "review_focus": "Không có nguồn thì không có tóm tắt"
+    },
+    {
+      "frame_id": "M-39",
+      "surface": "C-01",
+      "state_id": "FILTER_AI_MINE",
+      "review_focus": "Lọc Hội thoại AI trong Của tôi bằng bộ lọc Nguồn"
+    },
+    {
+      "frame_id": "M-40",
+      "surface": "C-01",
+      "state_id": "LIVE_QUEUE",
+      "review_focus": "Ưu tiên phiên đang mở; metadata trước nhận"
+    },
+    {
+      "frame_id": "M-41",
+      "surface": "C-02",
+      "state_id": "LIVE_AI",
+      "review_focus": "AI Web còn phiên; bật chat, trả lời và ghi chú riêng"
+    },
+    {
+      "frame_id": "M-42",
+      "surface": "C-02",
+      "state_id": "EXPIRED_AI",
+      "review_focus": "Hết 10 phút không hoạt động; không gửi, giữ nháp"
+    },
+    {
+      "frame_id": "M-43",
+      "surface": "C-02",
+      "state_id": "UNKNOWN_AI",
+      "review_focus": "Chưa xác định kết nối; chặn chat"
+    },
+    {
+      "frame_id": "M-44",
+      "surface": "C-04",
+      "state_id": "TICKET_LIST",
+      "review_focus": "Danh sách phiếu độc lập; lọc và liên kết nguồn"
+    },
+    {
+      "frame_id": "M-45",
+      "surface": "C-04",
+      "state_id": "TICKET_DETAIL",
+      "review_focus": "Thụ lý phiếu, lịch sử và quyền"
+    },
+    {
+      "frame_id": "M-46",
+      "surface": "C-02 + D-11",
+      "state_id": "CREATE_TICKET",
+      "review_focus": "Tạo phiếu xử lý từ ca đã bắt đầu"
+    }
+  ],
+  "prototype_version": "0.7.0",
+  "brd_ref": "../CSKH-01-brd-v0.5.0.md"
+}

@@ -1,0 +1,38 @@
+/* Canonical Operation Portal Design System v0.3; snapshot unchanged. */
+@import url("design-system/tokens/colors.css");
+@import url("design-system/tokens/spacing.css");
+@import url("design-system/tokens/typography.css");
+@import url("design-system/tokens/compatibility.css");
+@import url("design-system/tokens/alerts.css");
+
+:root {
+  --border-focus: #0052d7;
+  --border-subtle: #e1e7f4;
+  --neutral-0: #fff;
+  --neutral-100: #eef1f9;
+  --neutral-200: #e1e5f2;
+  --neutral-300: #c7cce0;
+  --neutral-400: #9aa2c4;
+  --neutral-50: #f5f8ff;
+  --neutral-500: #6e7699;
+  --neutral-600: #525a7d;
+  --neutral-700: #374056;
+  --neutral-800: #232a4d;
+  --neutral-900: #141a28;
+  --neutral-ink: #141a28;
+  --shadow-brand: 0 4px 16px #0052d72e;
+  --shadow-xs: 0 1px 2px #0e13200d;
+  --surface-brand: #0052d7;
+  --surface-brand-soft: #eef3fd;
+  --surface-card: #fff;
+  --surface-cream: #faf6f0;
+  --surface-sunken: #eef1f9;
+  --text-body: #374056;
+  --text-heading: #002663;
+  --text-link: #0052d7;
+  --text-on-brand: #fff;
+  --text-heading:var(--crm-text-heading);
+  --text-body:var(--crm-text-body);
+  --border-subtle:var(--crm-border-subtle);
+  --surface-card:var(--crm-bg-surface);
+}

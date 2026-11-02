@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "status": "Cần xác nhận theo nguồn dự án",
+  "note": "Registry mã sự cố theo mô hình 2 lớp: Lớp 1 (Màu mức độ - khóa cứng toàn viện) & Lớp 2 (Icon + Tên gọi - cho phép cấu hình theo từng cơ sở). Tham chiếu tiêu chuẩn quốc tế và quy chế phản ứng khẩn cấp/Báo động đỏ nội viện.",
+  "model": {
+    "layer1": "Severity → color (tokens/alerts.css). 4 mức độ: critical, warning, info, resolved + bổ trợ drill.",
+    "layer2": "Category → icon + text. Tên mã là nhãn chữ, không được tạo token màu theo tên mã."
+  },
+  "severityLevels": {
+    "critical": {
+      "id": "critical",
+      "label_vi": "Khẩn cấp",
+      "label_en": "Critical",
+      "icon": "octagon-alert",
+      "tokenPrefix": "--alert-critical",
+      "solidBg": "var(--alert-critical-solid)",
+      "textColor": "var(--alert-critical-on-solid)"
+    },
+    "warning": {
+      "id": "warning",
+      "label_vi": "Cảnh báo",
+      "label_en": "Warning",
+      "icon": "triangle-alert",
+      "tokenPrefix": "--alert-warning",
+      "solidBg": "var(--alert-warning-solid)",
+      "textColor": "var(--alert-warning-on-solid)"
+    },
+    "info": {
+      "id": "info",
+      "label_vi": "Thông báo",
+      "label_en": "Info",
+      "icon": "info",
+      "tokenPrefix": "--alert-info",
+      "solidBg": "var(--alert-info-solid)",
+      "textColor": "var(--alert-info-on-solid)"
+    },
+    "resolved": {
+      "id": "resolved",
+      "label_vi": "Đã kết thúc",
+      "label_en": "All clear",
+      "icon": "circle-check",
+      "tokenPrefix": "--alert-resolved",
+      "solidBg": "var(--alert-resolved-solid)",
+      "textColor": "var(--alert-resolved-on-solid)"
+    }
+  },
+  "modifiers": {
+    "drill": {
+      "id": "drill",
+      "label_vi": "DIỄN TẬP",
+      "label_en": "DRILL",
+      "tokenPrefix": "--alert-drill",
+      "rule": "Nền sọc chéo trung tính + nhãn badge DIỄN TẬP. Không dùng nền đỏ solid của sự cố thật."
+    }
+  },
+  "lifecycle": [
+    { "state": "standby",      "label_vi": "Chờ xác minh", "severity": "warning",  "pulse": false },
+    { "state": "active",       "label_vi": "Đang diễn ra", "severity": "critical", "pulse": true },
+    { "state": "acknowledged", "label_vi": "Đã nhận",      "severity": "critical", "pulse": false },
+    { "state": "resolved",     "label_vi": "Đã kết thúc",  "severity": "resolved", "pulse": false }
+  ],
+  "categories": {
+    "medical":  { "id": "medical",  "label_vi": "Y tế",                "icon": "heart-pulse" },
+    "security": { "id": "security", "label_vi": "An ninh",             "icon": "shield-alert" },
+    "facility": { "id": "facility", "label_vi": "Cơ sở và môi trường", "icon": "building-2" }
+  },
+  "codes": [
+    { "id": "CODE_BLUE",   "codeName": "CODE BLUE",   "category": "medical",  "label_vi": "Cấp cứu y tế",                   "defaultSeverity": "critical", "vnAlternative": "Báo động đỏ nội viện" },
+    { "id": "CODE_RED",    "codeName": "CODE RED",    "category": "facility", "label_vi": "Cháy hoặc khói",                 "defaultSeverity": "critical", "vnAlternative": "Báo cháy khẩn cấp" },
+    { "id": "CODE_BLACK",  "codeName": "CODE BLACK",  "category": "security", "label_vi": "Đe dọa đánh bom",                "defaultSeverity": "critical", "vnAlternative": "Đe dọa chất nổ" },
+    { "id": "CODE_PINK",   "codeName": "CODE PINK",   "category": "security", "label_vi": "Mất trẻ sơ sinh hoặc trẻ em",    "defaultSeverity": "critical", "vnAlternative": "Bắt cóc trẻ em" },
+    { "id": "CODE_ORANGE", "codeName": "CODE ORANGE", "category": "facility", "label_vi": "Tràn đổ vật liệu nguy hại",      "defaultSeverity": "warning",  "vnAlternative": "Sự cố hóa chất/sinh học" },
+    { "id": "CODE_YELLOW", "codeName": "CODE YELLOW", "category": "facility", "label_vi": "Thảm họa hoặc sự cố hàng loạt",  "defaultSeverity": "warning",  "vnAlternative": "Thảm họa hàng loạt" },
+    { "id": "CODE_SILVER", "codeName": "CODE SILVER", "category": "security", "label_vi": "Đối tượng có vũ khí",            "defaultSeverity": "critical", "vnAlternative": "Đối tượng có vũ khí nóng" },
+    { "id": "CODE_GREEN",  "codeName": "CODE GREEN",  "category": "facility", "label_vi": "Sơ tán",                         "defaultSeverity": "critical", "vnAlternative": "Lệnh sơ tán" },
+    { "id": "CODE_WHITE",  "codeName": "CODE WHITE",  "category": "security", "label_vi": "Người có hành vi bạo lực",       "defaultSeverity": "warning",  "vnAlternative": "Gây rối / Hành hung nhân viên y tế" }
+  ]
+}

@@ -1,0 +1,46 @@
+/* Compatibility aliases used by the current CRM; do not use crm-tone-* in new code. */
+:root{--crm-tone-1:#0052d7;--crm-tone-2:#0044b3;--crm-tone-3:#6f9fe8;--crm-tone-4:#1b7e93;--crm-tone-5:#1b7e93;--crm-tone-6:#1b7e93;--crm-tone-7:#1b7e93;--crm-tone-8:#6f9fe8;--crm-tone-9:#ef4444;--crm-tone-10:#ffffff;--crm-tone-11:#eef1f9;--crm-tone-12:#eef3fd;--crm-tone-13:#eef1f9;--crm-tone-14:rgba(27,126,147,.1);--crm-tone-15:rgba(14,19,32,.5);--crm-tone-16:rgba(255,255,255,.8);--crm-tone-17:#171f5b;--crm-tone-18:#3b4177;--crm-tone-19:#6e7699;--crm-tone-20:#9aa2c4;--crm-tone-21:#c7cce0;--crm-tone-22:#e8eef7;--crm-tone-23:#c7cce0;--crm-tone-24:#e8eef7;--crm-tone-25:#e1e5f2;--crm-tone-26:#ef4444;--crm-tone-27:#b91c1c;--crm-tone-28:#ef4444;--crm-tone-29:#22c55e;--crm-tone-30:rgba(14,19,32,.05);--crm-tone-31:rgba(14,19,32,.05);--crm-tone-32:rgba(14,19,32,.07);--crm-tone-33:rgba(14,19,32,.05);--crm-tone-34:rgba(14,19,32,.05);--crm-tone-35:rgba(14,19,32,.07);--crm-tone-36:rgba(14,19,32,.05);--crm-tone-37:rgba(0,82,215,.12);--crm-tone-38:#f6f8fd;--crm-tone-39:#eef1f9;--crm-tone-40:#3b4177;--crm-tone-41:#dbe7fb;--crm-tone-42:#eef3fd;--crm-tone-43:#1b7e93;--crm-tone-44:#dcfce7;--crm-tone-45:#15803d;--crm-tone-46:#fee2e2;--crm-tone-47:#b91c1c;--crm-tone-48:#fef3c7;--crm-tone-49:#92400e;--crm-tone-50:#ffffff;--crm-tone-51:#f59e0b;--crm-tone-52:#fef3c7;--crm-tone-53:#fee2e2;--crm-tone-54:#fee2e2;--crm-tone-55:#c2d8f7;--crm-tone-56:#eef3fd;--crm-tone-57:rgba(14,19,32,.3);--crm-tone-58:rgba(146,64,14,.12);--crm-tone-59:rgba(14,19,32,.5);--crm-tone-60:rgba(255,255,255,.95);}
+:root, [data-theme="light"] {
+  --brand-primary: var(--crm-tone-1);
+  --brand-primary-deep: var(--crm-tone-2);
+  --brand-primary-soft: var(--crm-tone-3);
+  --brand-secondary: var(--crm-tone-4);
+  --brand-secondary-strong: var(--crm-tone-5);
+  --brand-secondary-deep: var(--crm-tone-6);
+  --brand-secondary-darker: var(--crm-tone-7);
+  --brand-secondary-muted: var(--crm-tone-8);
+  --emergency: var(--crm-tone-9);
+  --surface-page: var(--crm-tone-10);
+  --surface-muted: var(--crm-tone-11);
+  --surface-primary-tint: var(--crm-tone-12);
+  --surface-secondary-tint: var(--crm-tone-13);
+  --surface-secondary-10: var(--crm-tone-14);
+  --surface-overlay: var(--crm-tone-15);
+  --surface-glass: var(--crm-tone-16);
+  --text-strong: var(--crm-tone-17);
+  --text-muted: var(--crm-tone-18);
+  --text-subtle: var(--crm-tone-19);
+  --text-placeholder: var(--crm-tone-20);
+  --text-disabled: var(--crm-tone-21);
+  --border-default: var(--crm-tone-22);
+  --border-strong: var(--crm-tone-23);
+  --border-soft: var(--crm-tone-24);
+  --border-divider-secondary: var(--crm-tone-25);
+  --error: var(--crm-tone-26);
+  --error-strong: var(--crm-tone-27);
+  --required-alt: var(--crm-tone-28);
+  --success: var(--crm-tone-29);
+  --on-brand: var(--crm-tone-10);
+  --focus-ring: var(--crm-tone-2);
+  --focus-ring-inverse: var(--crm-tone-10);
+  --shadow-sm: 0 1px 2px 0 var(--crm-tone-30);
+  --shadow-md: 0 4px 6px -1px var(--crm-tone-31), 0 2px 4px -2px var(--crm-tone-31);
+  --shadow-lg: 0 10px 15px -3px var(--crm-tone-31), 0 4px 6px -4px var(--crm-tone-31);
+  --shadow-xl: 0 20px 25px -5px var(--crm-tone-31), 0 8px 10px -6px var(--crm-tone-31);
+  --shadow-2xl: 0 25px 50px -12px var(--crm-tone-32);
+  --shadow-card: 0 4px 4px 0 var(--crm-tone-33);
+  --shadow-card-soft: 0 8px 24px 0 var(--crm-tone-34);
+  --shadow-float: 0 4px 40px 0 var(--crm-tone-35);
+  --shadow-panel: 0 8px 32px 0 var(--crm-tone-36);
+  --shadow-glow-secondary: 0 0 20px 10px var(--crm-tone-37);
+}

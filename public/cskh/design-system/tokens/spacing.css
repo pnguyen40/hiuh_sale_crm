@@ -1,0 +1,12 @@
+/* Semantic names reflect effective CRM geometry, not old rem scaling. */
+:root {
+ --crm-space-4: 4px; --crm-space-6: 6px; --crm-space-8: 8px;
+ --crm-space-10: 10px; --crm-space-12: 12px; --crm-space-14: 14px;
+ --crm-space-16: 16px; --crm-space-18: 18px; --crm-space-20: 20px;
+ --crm-space-24: 24px; --crm-space-28: 28px; --crm-space-32: 32px; --crm-space-40: 40px;
+ --crm-content-max: 1600px; --crm-control-h: 34px; --crm-control-lg-h: 36px;
+ --crm-icon-target: 44px; --crm-content-pad: 24px 28px 40px;
+ --crm-content-gap: 20px; --crm-control-radius: 8px;
+ --crm-action-radius: 20px; --crm-panel-radius: 12px;
+}
+@media (max-width: 767px) { :root { --crm-content-pad: 16px 16px 32px; --crm-content-gap: 16px; } }

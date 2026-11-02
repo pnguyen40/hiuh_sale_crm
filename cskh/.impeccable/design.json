@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "scope": "HIUH CSKH extension v0.9",
+  "source": "Operation Portal DS v0.3 + portal-v09.css + chat.css",
+  "mode": "operate",
+  "identity": "incumbent HIUH website / Operation Portal",
+  "focus": {
+    "style": "outline",
+    "color": "#0052d7",
+    "width": "2px"
+  },
+  "motion": {
+    "switch": "180ms cubic-bezier(.2,.8,.2,1)",
+    "reducedMotion": "disable transitions"
+  },
+  "responsive": {
+    "customerMobileMax": 600,
+    "portalTabsMax": 1023
+  },
+  "assets": "assets/ai-chat-sources.json"
+}

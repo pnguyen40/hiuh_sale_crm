@@ -1,0 +1,78 @@
+{
+  "tests": [
+    {
+      "name": "Đầu phiên VI, đúng URL, không giả consent, chưa có ca",
+      "pass": true
+    },
+    {
+      "name": "Ba mã lỗi: rỗng, khoảng trắng/gạch, không đủ/thừa và chữ",
+      "pass": true
+    },
+    {
+      "name": "Tên Unicode, số phân cách và +84 giữ gốc nhưng kiểm tra bản chuẩn",
+      "pass": true
+    },
+    {
+      "name": "Lỗi chưa xác nhận: chưa tạo ca; xác nhận tiếp tục: ca được nhận có cờ",
+      "pass": true
+    },
+    {
+      "name": "Có thể đóng form trước gửi; không được quay lại AI sau nhận",
+      "pass": true
+    },
+    {
+      "name": "Nhận ca, bắt đầu và ACK là ba điều kiện khác nhau",
+      "pass": true
+    },
+    {
+      "name": "Owner khác không nhận đè hoặc gửi thay",
+      "pass": true
+    },
+    {
+      "name": "Retry cùng handoff/message key chỉ có một bản ghi",
+      "pass": true
+    },
+    {
+      "name": "Tin nhân viên không gia hạn; khách được tiếp tục trong khi chờ",
+      "pass": true
+    },
+    {
+      "name": "Cảnh báo biên 120s, hết hạn 0, không hồi sinh khi reconnect/tin muộn",
+      "pass": true
+    },
+    {
+      "name": "Mất kết nối khóa gửi; khôi phục không reset thời hạn hoặc AI lock",
+      "pass": true
+    },
+    {
+      "name": "Ngôn ngữ thủ công ưu tiên, nhận diện mẫu EN, lịch sử bất biến",
+      "pass": true
+    },
+    {
+      "name": "Khác phiên cùng số không gộp; sai session gửi bị từ chối",
+      "pass": true
+    },
+    {
+      "name": "Thứ tự các tin và mốc bàn giao cùng timestamp có sequence ổn định",
+      "pass": true
+    },
+    {
+      "name": "Metadata log không chứa text tin nhắn, tên hoặc số đã nhập",
+      "pass": true
+    },
+    {
+      "name": "Cùng khóa khác nội dung bị báo xung đột, không ghi đè",
+      "pass": true
+    },
+    {
+      "name": "Sửa liên hệ phải có lý do, giữ gốc và trước-sau ngoài metadata log",
+      "pass": true
+    },
+    {
+      "name": "Cấu hình timeout đi qua mô hình, không cố định 600s",
+      "pass": true
+    }
+  ],
+  "passed": 18,
+  "total": 18
+}

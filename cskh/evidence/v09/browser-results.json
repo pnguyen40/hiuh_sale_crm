@@ -1,0 +1,374 @@
+[
+  {
+    "name": "Sidebar order, renamed ticket, v0.9 label",
+    "pass": true,
+    "detail": {
+      "nav": [
+        "Tiếp nhận & Xử lý",
+        "Phiếu yêu cầu",
+        "CSKH log",
+        "Thông báo",
+        "Mẫu thông báo"
+      ],
+      "version": "Prototype v0.9.0 · AI chat & log"
+    }
+  },
+  {
+    "name": "Native: select two topics, stay open, chips OR, Escape returns focus",
+    "pass": true,
+    "detail": {
+      "checked": 2,
+      "count": 38,
+      "filters": [
+        "dat-lich",
+        "tu-van-goi"
+      ],
+      "open": true
+    }
+  },
+  {
+    "name": "Native: clear only a facet, Xong closes; no selection means all",
+    "pass": true
+  },
+  {
+    "name": "Native: single-select period stays radio and date fields work",
+    "pass": true
+  },
+  {
+    "name": "Native: recent-window filter count, label, expiry after 15min, historical retained",
+    "pass": true,
+    "detail": {
+      "badges": [
+        "Phiên vừa hết trong 15'",
+        "Phiên vừa hết trong 15'",
+        "Phiên vừa hết trong 15'",
+        "Phiên vừa hết trong 15'",
+        "Phiên vừa hết trong 15'",
+        "Phiên vừa hết trong 15'"
+      ],
+      "count": "Vừa hết trong 15' · 6",
+      "ids": [
+        "CS-EX-007",
+        "CS-EX-034",
+        "CS-EX-058",
+        "CS-EX-031",
+        "CS-EX-010",
+        "CS-EX-055"
+      ]
+    }
+  },
+  {
+    "name": "Queue preview masks content, including supervisor queue",
+    "pass": true,
+    "detail": {
+      "cols": [
+        "Mã yêu cầu",
+        "Nguồn",
+        "Chủ đề",
+        "Câu hội thoại cuối cùng",
+        "Trạng thái",
+        "Phụ trách",
+        "Tiếp nhận",
+        "Hẹn theo dõi",
+        "Thao tác"
+      ],
+      "locked": 18,
+      "previews": 0
+    }
+  },
+  {
+    "name": "Native: live reply updates last-message sender, no private note in preview",
+    "pass": true,
+    "detail": {
+      "speaker": "STAFF",
+      "text": "CSKH14:23Tin công khai kiểm thử v0.9"
+    }
+  },
+  {
+    "name": "Native: hide/show last-message column",
+    "pass": true
+  },
+  {
+    "name": "Native: ticket module has 25 fixtures and multi-state filter",
+    "pass": true,
+    "detail": {
+      "filtered": 10
+    }
+  },
+  {
+    "name": "Native: ticket detail fields, history, update state",
+    "pass": true
+  },
+  {
+    "name": "Native: CSKH log multi-outcome and open diff",
+    "pass": true,
+    "detail": {
+      "filtered": 16
+    }
+  },
+  {
+    "name": "DS v0.3 computed type, colors, radii, sidebar and header",
+    "pass": true,
+    "detail": {
+      "bg": "rgb(246, 248, 253)",
+      "body": "Lexend, ui-sans-serif, system-ui, sans-serif",
+      "buttonRadius": "20px",
+      "filterRadius": "8px",
+      "header": 64,
+      "heading": "\"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif",
+      "headingColor": "rgb(22, 32, 92)",
+      "headingSize": "22px",
+      "sidebar": 264
+    }
+  },
+  {
+    "name": "All 51 frames render without exceptions, including empty/error/revoked",
+    "pass": true,
+    "detail": [
+      {
+        "frame": "M-01",
+        "ok": true
+      },
+      {
+        "frame": "M-02",
+        "ok": true
+      },
+      {
+        "frame": "M-03",
+        "ok": true
+      },
+      {
+        "frame": "M-04",
+        "ok": true
+      },
+      {
+        "frame": "M-05",
+        "ok": true
+      },
+      {
+        "frame": "M-06",
+        "ok": true
+      },
+      {
+        "frame": "M-07",
+        "ok": true
+      },
+      {
+        "frame": "M-08",
+        "ok": true
+      },
+      {
+        "frame": "M-09",
+        "ok": true
+      },
+      {
+        "frame": "M-10",
+        "ok": true
+      },
+      {
+        "frame": "M-11",
+        "ok": true
+      },
+      {
+        "frame": "M-12",
+        "ok": true
+      },
+      {
+        "frame": "M-13",
+        "ok": true
+      },
+      {
+        "frame": "M-14",
+        "ok": true
+      },
+      {
+        "frame": "M-15",
+        "ok": true
+      },
+      {
+        "frame": "M-16",
+        "ok": true
+      },
+      {
+        "frame": "M-17",
+        "ok": true
+      },
+      {
+        "frame": "M-18",
+        "ok": true
+      },
+      {
+        "frame": "M-19",
+        "ok": true
+      },
+      {
+        "frame": "M-20",
+        "ok": true
+      },
+      {
+        "frame": "M-21",
+        "ok": true
+      },
+      {
+        "frame": "M-22",
+        "ok": true
+      },
+      {
+        "frame": "M-23",
+        "ok": true
+      },
+      {
+        "frame": "M-24",
+        "ok": true
+      },
+      {
+        "frame": "M-25",
+        "ok": true
+      },
+      {
+        "frame": "M-26",
+        "ok": true
+      },
+      {
+        "frame": "M-27",
+        "ok": true
+      },
+      {
+        "frame": "M-28",
+        "ok": true
+      },
+      {
+        "frame": "M-29",
+        "ok": true
+      },
+      {
+        "frame": "M-30",
+        "ok": true
+      },
+      {
+        "frame": "M-31",
+        "ok": true
+      },
+      {
+        "frame": "M-32",
+        "ok": true
+      },
+      {
+        "frame": "M-33",
+        "ok": true
+      },
+      {
+        "frame": "M-34",
+        "ok": true
+      },
+      {
+        "frame": "M-35",
+        "ok": true
+      },
+      {
+        "frame": "M-36",
+        "ok": true
+      },
+      {
+        "frame": "M-37",
+        "ok": true
+      },
+      {
+        "frame": "M-38",
+        "ok": true
+      },
+      {
+        "frame": "M-39",
+        "ok": true
+      },
+      {
+        "frame": "M-40",
+        "ok": true
+      },
+      {
+        "frame": "M-41",
+        "ok": true
+      },
+      {
+        "frame": "M-42",
+        "ok": true
+      },
+      {
+        "frame": "M-43",
+        "ok": true
+      },
+      {
+        "frame": "M-44",
+        "ok": true
+      },
+      {
+        "frame": "M-45",
+        "ok": true
+      },
+      {
+        "frame": "M-46",
+        "ok": true
+      },
+      {
+        "frame": "M-47",
+        "ok": true
+      },
+      {
+        "frame": "M-48",
+        "ok": true
+      },
+      {
+        "frame": "M-49",
+        "ok": true
+      },
+      {
+        "frame": "M-50",
+        "ok": true
+      },
+      {
+        "frame": "M-51",
+        "ok": true
+      }
+    ]
+  },
+  {
+    "name": "AI log fixture set, separate store v09, varied data",
+    "pass": true,
+    "detail": {
+      "channels": [
+        "WEB",
+        "APP"
+      ],
+      "coverage": [
+        "FULL",
+        "PARTIAL",
+        "UNAVAILABLE"
+      ],
+      "total": 14,
+      "warnings": 5
+    }
+  },
+  {
+    "name": "AI log recent/old expired labels both available",
+    "pass": true,
+    "detail": [
+      "Đang chat CSKH",
+      "Khách yêu cầu CSKH",
+      "Đã hết hơn 15'",
+      "Khách yêu cầu CSKH",
+      "Khách yêu cầu CSKH",
+      "Đang chat CSKH",
+      "Khách yêu cầu CSKH",
+      "Phiên vừa hết trong 15'",
+      "Khách yêu cầu CSKH",
+      "Khách yêu cầu CSKH",
+      "Đang chat CSKH",
+      "Đang chat CSKH",
+      "Khách yêu cầu CSKH",
+      "Khách yêu cầu CSKH",
+      "Khách yêu cầu CSKH",
+      "Đang chat CSKH",
+      "Đang chat CSKH"
+    ]
+  }
+]

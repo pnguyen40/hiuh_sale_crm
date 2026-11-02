@@ -1,0 +1,3 @@
+/* Font loading is intentionally not a remote CSS @import.
+Use the Google Fonts <link> in fonts/head.html, as in the current prototype.
+Network-free use requires licensed local font files; none are bundled here. */

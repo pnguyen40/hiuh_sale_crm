@@ -1,0 +1,105 @@
+{
+  "tickets": {
+    "overflow": 0,
+    "tones": [
+      {
+        "cls": "badge neutral",
+        "text": "Mới"
+      },
+      {
+        "cls": "badge primary",
+        "text": "Đang xử lý"
+      },
+      {
+        "cls": "badge warning",
+        "text": "Chờ phản hồi"
+      },
+      {
+        "cls": "badge success",
+        "text": "Hoàn tất"
+      },
+      {
+        "cls": "badge neutral",
+        "text": "Đã hủy"
+      },
+      {
+        "cls": "badge neutral",
+        "text": "Mới"
+      },
+      {
+        "cls": "badge primary",
+        "text": "Đang xử lý"
+      },
+      {
+        "cls": "badge warning",
+        "text": "Chờ phản hồi"
+      },
+      {
+        "cls": "badge success",
+        "text": "Hoàn tất"
+      },
+      {
+        "cls": "badge neutral",
+        "text": "Đã hủy"
+      },
+      {
+        "cls": "badge neutral",
+        "text": "Mới"
+      },
+      {
+        "cls": "badge primary",
+        "text": "Đang xử lý"
+      },
+      {
+        "cls": "badge warning",
+        "text": "Chờ phản hồi"
+      },
+      {
+        "cls": "badge success",
+        "text": "Hoàn tất"
+      },
+      {
+        "cls": "badge neutral",
+        "text": "Đã hủy"
+      },
+      {
+        "cls": "badge neutral",
+        "text": "Mới"
+      },
+      {
+        "cls": "badge primary",
+        "text": "Đang xử lý"
+      },
+      {
+        "cls": "badge warning",
+        "text": "Chờ phản hồi"
+      },
+      {
+        "cls": "badge success",
+        "text": "Hoàn tất"
+      },
+      {
+        "cls": "badge neutral",
+        "text": "Đã hủy"
+      }
+    ]
+  },
+  "footer": [
+    {
+      "footerBottom": 780.09375,
+      "footerReachable": true,
+      "height": 844,
+      "mainOverflow": 0,
+      "tableHeight": 379.796875,
+      "width": 390
+    },
+    {
+      "footerBottom": 727.796875,
+      "footerReachable": true,
+      "height": 800,
+      "mainOverflow": 0,
+      "tableHeight": 260,
+      "width": 1280
+    }
+  ]
+}

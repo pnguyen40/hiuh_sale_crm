@@ -12,7 +12,12 @@
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "export:html": "node scripts/export-single-html.mjs"
+    "export:html": "node scripts/export-single-html.mjs",
+    "export:all": "npm run export:html && npm run cskh:export",
+    "cskh:start": "node cskh/server.mjs",
+    "cskh:qa": "node cskh/scripts/qa-v09-model.mjs && node cskh/scripts/qa-ai-model.mjs",
+    "cskh:export": "node cskh/scripts/export-single-html.mjs && cp cskh/handoff/CSKH-Operation-Portal-v0.9.0.html cskh-prototype.html",
+    "cskh:sync": "rsync -av --exclude 'evidence' --exclude '.impeccable' cskh/ public/cskh/"
   },
   "overrides": {
     "rolldown": "1.2.1"

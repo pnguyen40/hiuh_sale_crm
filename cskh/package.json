@@ -1,0 +1,20 @@
+{
+  "name": "hiuh-cskh-poc",
+  "private": true,
+  "version": "0.9.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "qa": "node scripts/qa.mjs",
+    "qa:v06": "node scripts/qa-v06.mjs",
+    "qa:workbench": "node scripts/qa-workbench.mjs",
+    "qa:context": "node scripts/qa-context.mjs",
+    "export": "node scripts/export-single-html.mjs",
+    "qa:v07": "node scripts/qa-v07.mjs",
+    "qa:ai": "node scripts/qa-ai-model.mjs",
+    "qa:v09": "node scripts/qa-v09-model.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

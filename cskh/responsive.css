@@ -1,0 +1,135 @@
+/* Reflow of the existing Portal. Desktop geometry uses its 264/64 shell and
+   20/16/12 spacing. 1023/767 breakpoints and 44px touch targets: adapt skill. */
+html,body {width:100%;min-width:0;height:100%;overflow:hidden;}
+#screen {width:100%;height:100dvh;display:grid;grid-template-columns:var(--crm-sidebar-w) minmax(0,1fr);grid-template-rows:64px minmax(0,1fr);}
+.sidebar.crm-2 {position:relative;inset:auto;grid-row:1 / -1;width:var(--crm-sidebar-w);height:100%;min-height:0;}
+.portal-header {position:relative;inset:auto;width:auto;height:auto;min-width:0;gap:12px;padding:10px 20px;}
+.portal-breadcrumb {min-width:0;}
+.portal-account {flex-wrap:wrap;justify-content:flex-end;gap:4px 10px;}
+.content {position:relative;inset:auto;width:auto;height:auto;min-width:0;min-height:0;margin:20px;display:flex;flex-direction:column;overflow:hidden;gap:14px;}
+.content.case-workbench {gap:0;}
+.page-title {height:auto;min-height:48px;flex:none;gap:12px;}
+.page-title>div {min-width:0;}
+.detail-meta {position:relative;inset:auto;width:auto;height:auto;min-height:44px;flex:none;gap:12px;flex-wrap:wrap;}
+.detail-meta>.row {flex-wrap:wrap;gap:8px;}
+.detail-columns {position:relative;inset:auto;height:auto;min-height:0;min-width:0;flex:1;grid-template-columns:minmax(200px, .8fr) minmax(0,1.8fr) minmax(240px,1fr);gap:16px;}
+.detail-column {height:auto;min-width:0;min-height:0;}
+.identity-header,.identity-section,.care-actions,.care-section,.case-progress {padding:16px;}
+.conversation-panel .source-content {padding:16px;}
+.source-tools {padding:12px 16px;gap:8px;flex-wrap:wrap;}
+.source-tools .button {height:auto;min-height:30px;}
+.note-composer {padding:12px 16px;}
+.note-composer>.row {flex-wrap:wrap;gap:4px;}
+.summary-bottom,.ai-summary>.row {flex-wrap:wrap;}
+.summary-bottom>.help {flex:1;min-width:160px;}
+.case-references {grid-template-columns:1fr;gap:4px;}
+.case-references strong {margin-bottom:4px;}
+.contact-line {flex-wrap:wrap;}
+.data-grid {min-width:0;}
+.data-value,.identity-header>p {overflow-wrap:anywhere;}
+.backdrop {position:fixed;inset:0;width:100%;height:100dvh;}
+.modal {position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(var(--modal-width),calc(100vw - 32px));height:auto;max-height:min(var(--modal-height),calc(100dvh - 32px));}
+.modal-body {min-height:0;}
+.modal.drawer {left:auto;right:0;top:0;transform:none;height:100dvh;max-height:100dvh;}
+#toast {position:fixed;left:50%;top:auto;bottom:20px;max-width:calc(100vw - 32px);width:max-content;transform:translateX(-50%);}
+.mobile-menu-button,.mobile-close-nav,.mobile-detail-tabs,.nav-backdrop {display:none;}
+:focus-visible {outline:2px solid var(--brand-primary);outline-offset:2px;}
+::selection {background:var(--crm-primary-200);color:var(--text-strong);}
+input,textarea {caret-color:var(--brand-primary);}
+@media(max-width:1023px) {
+  #screen {grid-template-columns:minmax(0,1fr);}
+  .sidebar.crm-2 {display:none;position:fixed;left:0;top:0;bottom:0;z-index:42;width:min(var(--crm-sidebar-w),calc(100vw - 44px));}
+  #screen.nav-open .sidebar {display:flex;}
+  #screen.nav-open .nav-backdrop {display:block;position:fixed;inset:0;background:var(--surface-overlay);z-index:41;border:0;}
+  .mobile-menu-button,.mobile-close-nav {display:inline-flex;flex:none;}
+  .mobile-close-nav {position:absolute;right:8px;top:12px;}
+  .portal-header {grid-column:1;grid-row:1;}
+  .portal-breadcrumb {flex:1;}
+  .portal-account>span:not(.prototype-label) {display:none;}
+  .portal-account strong {display:none;}
+  .content {grid-column:1;grid-row:2;margin:16px;}
+  .detail-columns {display:block;}
+  .detail-columns>.detail-column {height:100%;display:none;}
+  .detail-columns[data-mobile-section=source]>[data-geometry=source] {display:flex;}
+  .detail-columns[data-mobile-section=identity]>[data-geometry=identity],.detail-columns[data-mobile-section=care]>[data-geometry=care] {display:block;}
+  .mobile-detail-tabs {display:flex;gap:4px;flex:none;border-bottom:1px solid var(--border-strong);}
+  .mobile-detail-tabs button {flex:1;min-width:0;min-height:44px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--text-muted);font-size:13px;}
+  .mobile-detail-tabs button[aria-selected=true] {border-bottom-color:var(--brand-primary);color:var(--brand-primary-deep);font-weight:600;}
+  .log-layout.has-detail {flex-direction:column;overflow:auto;}
+  .log-detail {width:100%;max-height:50dvh;}
+}
+@media(max-width:767px) {
+  .content {margin:12px;gap:12px;}
+  .portal-header {padding:8px 12px;gap:8px;}
+  .portal-account {display:none;}
+  .portal-breadcrumb {font-size:12px;gap:6px;}
+  .page-title {align-items:flex-start;flex-wrap:wrap;gap:8px;}
+  .page-title h1 {font-size:20px;line-height:1.4;}
+  .page-title p {font-size:12px;}
+  .page-title .row {gap:8px!important;}
+  .page-title>.source {font-size:12px;}
+  .detail-meta .meta-separator {display:none;}
+  .detail-meta {padding-bottom:8px;gap:8px;}
+  .detail-meta>.row {gap:4px 8px;}
+  .detail-meta .meta-text {font-size:11px;}
+  .case-workbench .page-title {margin-bottom:12px;}
+  .case-workbench .wb-views {padding:0;gap:8px;flex-wrap:wrap;}
+  .case-workbench .wb-tabs {flex:1 1 100%;}
+  .case-workbench .wb-view-actions {margin:0;flex-wrap:wrap;}
+  .case-workbench .case-filters {padding:12px 0 0;}
+  .case-workbench .case-results {padding:12px 0;}
+  .result-copy {width:100%;}
+  .result-actions {gap:6px;flex-wrap:wrap;margin-left:0;max-width:100%;}
+  .case-results select {max-width:100%;flex:1;}
+  .case-results .wb-filter {margin-left:auto;}
+  .case-workbench .active-filters {padding:8px;margin-top:8px;}
+  .case-workbench .filter-chip {height:auto!important;min-height:44px;white-space:normal;text-align:left;max-width:100%;}
+  .button,.view-tab,.wb-filter-trigger,.case-results select,.case-workbench .wb-view-actions .button,.case-results .button,.case-results .wb-filter-trigger,.note-composer .button,.modal-footer .button {min-height:44px;height:auto;}
+  .case-workbench .wb-search-control {height:44px;}
+  .case-workbench input,.field input,.field select,.field textarea {font-size:16px;}
+  .wb-popover {width:calc(100vw - 24px);min-width:0;max-height:60dvh;}
+  .filter-option {min-height:44px;font-size:14px;}
+  .popover-heading .button {width:44px;}
+  .filter-dot {flex:none;}
+  .wb-pagination {flex-wrap:wrap;gap:8px;}
+  .wb-pagination>.row {width:100%;justify-content:space-between;gap:4px;flex-wrap:wrap;}
+  .wb-pagination .button {font-size:12px;padding:0 8px;}
+  .wb-footnote {font-size:11px;align-items:flex-start;}
+  .view-editor {padding:12px;}
+  .view-editor .field {width:100%;}
+  .view-editor .help {max-width:100%;}
+  .workbench .wb-filters:not(.case-filters) .field {flex:1 1 100%;min-width:0;}
+  .workbench:has(#log-filters) {overflow-y:auto;}
+  .workbench:has(#log-filters) .log-layout {flex:none;height:50dvh;}
+  .log-notice,.log-layout {font-size:12px;}
+  .source-tools h2 {font-size:14px;}
+  .conversation-panel .source-content {padding:12px;}
+  .chat-bubble {font-size:14px;line-height:1.6;}
+  .ai-summary dd {font-size:14px;}
+  .ai-summary dd .button {min-height:44px;font-size:12px;}
+  .note-composer {padding:8px 12px;}
+  .note-composer textarea {min-height:62px;}
+  .note-composer .note-footer {margin-top:4px;}
+  .note-composer>p.help {display:none;}
+  .source-content .data-grid {grid-template-columns:1fr;}
+  .care-actions .action-row {flex-wrap:wrap;}
+  .modal {width:calc(100vw - 24px);max-height:calc(100dvh - 24px);}
+  .modal.drawer {width:100%;border-radius:0;}
+  .modal-header,.modal-body,.modal-footer {padding:12px;}
+  .modal-header p {font-size:12px;}
+  .modal-footer .button {font-size:13px;padding:0 12px;}
+  .wait-date-fields {grid-template-columns:1fr 1fr 1.3fr;gap:8px;}
+  .wait-date-fields>.field:last-child {grid-column:1 / -1;}
+  .segmented label {min-height:44px;}
+}
+@media(prefers-reduced-motion:reduce) {* {scroll-behavior:auto!important;transition:none!important;}}
+/* Landscape phone / virtual-keyboard height: let the page scroll instead of
+   clipping the source or the private-note submit button. */
+@media(max-width:1023px) and (max-height:600px) {
+  .content {overflow-y:auto;}
+  .detail-columns {flex:none;height:auto;min-height:0;}
+  .detail-columns>.detail-column {height:auto;}
+  .conversation-panel .source-content {flex:none;overflow:visible;}
+  .conversation-panel .note-composer {flex:none;}
+  .workbench .table-panel {flex:none;height:50dvh;}
+}

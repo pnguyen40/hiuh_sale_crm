@@ -1,0 +1,62 @@
+/* CRM source: styles.css 3544–3560, 3596–3608, 4101, 4116, 4214.
+   Geometry is copied from CRM. Colors map to the existing Portal tokens.
+   Desktop filter row deliberately scrolls instead of CRM's inner wrapping. */
+.case-workbench {gap:0;}
+.case-workbench .page-title {margin-bottom:20px;}
+.case-workbench .wb-views {gap:12px;padding:0 20px 12px;min-width:0;}
+.case-workbench .wb-tabs {flex:0 1 auto;min-width:0;gap:4px;padding:4px;border-radius:11px;background:var(--surface-muted);border-color:var(--border-divider-secondary);}
+.case-workbench .wb-view-actions {display:flex;gap:8px;margin-left:auto;flex:none;}
+.case-workbench .wb-view-actions .button {height:30px;padding:0 12px;gap:4px;border-radius:8px;font-size:12px;white-space:nowrap;}
+.case-workbench .save-view {border:1px dashed var(--border-strong);background:var(--crm-tone-50);}
+.case-workbench .case-filters {display:block;min-width:0;padding:16px 20px;}
+.wb-filter-strip {display:flex;flex-wrap:nowrap;align-items:flex-end;gap:10px;overflow-x:auto;overflow-y:hidden;padding:4px 0 8px;scrollbar-width:thin;scrollbar-color:var(--border-strong) transparent;}
+.case-workbench .wb-search {display:flex;flex-direction:column;gap:4px;flex:0 0 260px;width:260px;min-width:260px;max-width:260px;}
+.case-workbench .wb-search>.label {font-size:11px;color:var(--text-subtle);}
+.wb-search-control {display:flex;align-items:center;gap:6px;height:34px;padding:0 10px;border:1px solid var(--border-strong);border-radius:8px;background:var(--crm-tone-50);}
+.wb-search-control .icon {color:var(--text-muted);width:16px;height:16px;}
+.case-workbench .wb-search-control input {width:100%;height:100%;padding:0;border:0;background:transparent;color:var(--text-strong);font-size:13px;outline:0;box-shadow:none;}
+.wb-search-control:focus-within {outline:2px solid var(--brand-primary);outline-offset:2px;}
+.wb-filter {position:relative;flex:none;}
+.wb-filter-trigger {height:34px;max-width:260px;padding:0 8px 0 12px;display:flex;align-items:center;gap:4px;border:1px solid var(--border-strong);border-radius:8px;background:var(--crm-tone-50);color:var(--text-strong);font-size:13px;font-weight:500;white-space:nowrap;}
+.wb-filter-trigger>.icon {width:16px;height:16px;}
+.filter-dot {width:6px;height:6px;border-radius:50%;background:var(--border-strong);flex:none;margin-right:4px;}
+.wb-filter-trigger.is-active {border-color:var(--brand-primary);background:var(--surface-primary-tint);color:var(--brand-primary-deep);}
+.is-active .filter-dot {background:var(--brand-primary);}
+.wb-filter-trigger[aria-disabled=true] {cursor:not-allowed;color:var(--text-muted);background:var(--surface-muted);border-color:var(--border-strong);}
+.wb-filter-trigger[aria-disabled=true] .filter-dot {background:var(--text-muted);}
+.filter-hint {position:fixed;z-index:30;display:none;max-width:260px;padding:8px 12px;background:var(--text-strong);color:var(--text-on-brand);border-radius:8px;font-size:12px;margin-top:4px;}
+.wb-filter-trigger:hover+.filter-hint,.wb-filter-trigger:focus+.filter-hint {display:block;}
+.wb-more-filters {margin-left:auto;}
+.wb-popover {position:fixed;inset:auto;margin:0;width:max-content;min-width:260px;max-width:calc(100vw - 24px);max-height:min(360px,calc(100dvh - 24px));overflow:auto;padding:6px;border:1px solid var(--border-strong);border-radius:8px;background:var(--surface-card);color:var(--text-strong);box-shadow:var(--shadow-lg);font-size:13px;}
+.wb-popover::backdrop {background:transparent;}
+.popover-heading {display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 6px 4px;font-size:12px;color:var(--text-muted);}
+.popover-heading .button {width:30px;height:30px;padding:0;}
+.popover-options {display:flex;flex-direction:column;gap:2px;}
+.filter-option {display:flex;align-items:center;gap:8px;min-height:34px;padding:6px 8px;border-radius:8px;cursor:pointer;}
+.filter-option:has(input:checked),.filter-option:hover {background:var(--surface-primary-tint);}
+.wb-popover input[type=checkbox],.wb-popover input[type=radio] {flex:none;accent-color:var(--brand-primary);width:16px;height:16px;margin:0;}
+.wb-popover .help {padding:8px;font-size:11px;color:var(--text-muted);}
+.filter-date-range {padding:8px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--border-subtle);}
+.case-workbench .filter-date-range .field {width:100%;min-width:0;}
+.case-workbench .active-filters {padding:8px 16px;background:var(--surface-muted);gap:6px;}
+.case-workbench .filter-chip {height:26px!important;background:var(--surface-card)!important;font-size:11px!important;border-color:var(--border-strong);}
+.case-workbench .active-filters>.ghost {height:26px;font-size:12px;}
+.case-workbench .case-results {padding:12px 20px;gap:8px 12px;flex-wrap:wrap;border-bottom:1px solid var(--border-subtle);}
+.result-copy {display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.result-copy strong {font-size:13px;font-weight:600;}
+.result-copy span {font-size:11px;color:var(--text-muted);}
+.result-actions {display:flex;align-items:center;gap:8px;margin-left:auto;}
+.case-results .button,.case-results .wb-filter-trigger,.case-results select {height:30px;padding:0 10px;font-size:12px;white-space:nowrap;}
+.case-results .wb-filter-trigger {background:var(--crm-tone-50);border-color:var(--border-strong);color:var(--text-strong);}
+.case-results .filter-dot {display:none;}
+.case-results select {min-width:0;max-width:190px;}
+.case-workbench .view-editor {margin-bottom:12px;}
+.case-workbench .wb-pagination {margin-top:14px;}
+.case-workbench .wb-footnote {margin-top:14px;}
+/* D-05 reuses existing field spacing. Date and optional time are separate data. */
+.wait-party,.wait-date {padding:0;margin:0;border:0;min-width:0;}
+.wait-party legend,.wait-date legend {font-size:13px;margin-bottom:8px;color:var(--text-strong);}
+.wait-date-fields {display:grid;grid-template-columns:1fr 1fr 1.3fr 1.8fr;gap:12px;}
+.wait-date-fields .field {min-width:0;}
+.wait-date-fields input {width:100%;}
+.wait-date .help {margin-top:8px;}

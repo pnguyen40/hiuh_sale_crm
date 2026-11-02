@@ -1,0 +1,10 @@
+{
+  "checked": "2026-11-02",
+  "assets": {
+    "hiuh-logo.png": "https://storage.googleapis.com/hiuh-public-media-production/uploads/cms/content-blocks/hb-logo-horizontal.png",
+    "fonts/montserrat-normal-vietnamese.woff2": "https://hiuhospital.com/assets/fonts/montserrat-normal-vietnamese.woff2",
+    "fonts/montserrat-normal-latin-ext.woff2": "https://hiuhospital.com/assets/fonts/montserrat-normal-latin-ext.woff2",
+    "fonts/montserrat-normal-latin.woff2": "https://hiuhospital.com/assets/fonts/montserrat-normal-latin.woff2"
+  },
+  "purpose": "Nhận diện website HIUH trong prototype local; không thay đổi tài sản nguồn."
+}
