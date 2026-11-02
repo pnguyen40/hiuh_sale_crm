@@ -220,6 +220,10 @@ document.addEventListener("click", async (event) => {
   if (!el || el.disabled || pending) return;
   const action = el.dataset.action,
     id = el.dataset.id;
+  if(action==='review-ai'){
+    window.location.href='review-ai.html';
+    return;
+  }
   if(action==='nav-toggle'||action==='nav-close'){
     s.navOpen=action==='nav-toggle'?!s.navOpen:false;
     document.querySelector('#screen').classList.toggle('nav-open',s.navOpen);
