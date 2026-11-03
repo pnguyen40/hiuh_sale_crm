@@ -87,6 +87,8 @@ npm run cskh:export    # Sinh ra cskh-prototype.html (2.8 MB)
 ```
 Hai file HTML này có thể mở trực tiếp bằng trình duyệt (double-click hoặc mở bằng Chrome/Edge) mà không cần cài đặt Node.js hay Internet.
 
+Đặt `sale-crm-prototype.html` và `cskh-prototype.html` cùng thư mục để menu CSKH trong bản CRM offline mở đúng màn tương ứng, gồm **Phiếu yêu cầu (M-49)**. Trên web, menu tiếp tục dùng đường dẫn `/cskh/`.
+
 ### 5. Đồng bộ khi sửa code CSKH
 Nếu bạn chỉnh sửa file trong thư mục `cskh/`:
 ```bash

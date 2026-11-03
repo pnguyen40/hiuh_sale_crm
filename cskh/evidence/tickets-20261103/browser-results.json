@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-03T10:11:53.627Z",
+  "method": "Isolated agent-browser; native clicks, input and selectors; datetime-local populated via DOM because CLI fill leaves it empty",
+  "results": [
+    {
+      "name": "Create from source case, update and resolve through UI",
+      "pass": true,
+      "details": {
+        "id": "REQ-20261103-0084",
+        "status": "RESOLVED",
+        "history": 3
+      }
+    },
+    {
+      "name": "Mobile CRM drawer reaches Phiếu yêu cầu",
+      "pass": true,
+      "details": {
+        "overflow": 0
+      }
+    },
+    {
+      "name": "Offline CRM handoff opens packaged CSKH tickets",
+      "pass": true,
+      "details": {
+        "count": 25,
+        "rows": 20,
+        "title": "Phiếu yêu cầu",
+        "url": "file:///Users/phongnguyen/workspace/Nexlab/repos/CRM_repo/cskh-prototype.html?surface=portal&frame=M-49"
+      }
+    },
+    {
+      "name": "Desktop CRM sidebar scrolls independently and opens M-49",
+      "pass": true,
+      "details": {
+        "height": 600,
+        "navScroll": 401,
+        "pageScroll": 12,
+        "viewport": 600
+      }
+    },
+    {
+      "name": "Ticket pagination and multiple status filter",
+      "pass": true,
+      "details": {
+        "rows": 10
+      }
+    }
+  ]
+}

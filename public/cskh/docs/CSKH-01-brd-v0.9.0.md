@@ -126,7 +126,7 @@ FR-12 cũ không phải chuyển nhu cầu B2B; FR-13 phụ trách lịch sử; 
 |---|---|---|
 | CSKH — danh sách | Tiếp nhận & Xử lý | Tên menu/màn C-01; thay Yêu cầu hỗ trợ từ v0.7 |
 | CSKH — đối tượng nguồn | Ca tiếp nhận; chi tiết hiển thị Yêu cầu CS-… | Một lần tiếp nhận từ AI/Liên hệ/Đặt khám; không gọi là Contact/Lead |
-| CSKH — công việc theo dõi | Phiếu yêu cầu; nút Tạo phiếu xử lý | REQ-… liên kết ca nguồn, vòng đời riêng; không phải Hồ sơ tư vấn CRM |
+| CSKH — công việc theo dõi | Phiếu yêu cầu; nút Tạo phiếu yêu cầu | REQ-… liên kết ca nguồn, vòng đời riêng; không phải Hồ sơ tư vấn CRM |
 | CSKH | Người liên hệ; thông tin liên hệ | Người đang trao đổi, không mặc định là người đi khám |
 | CRM | Danh bạ Contact | Tập bản ghi người liên hệ; không phải yêu cầu hỗ trợ hay cơ hội |
 | CRM B2C | Hồ sơ tư vấn (Consultation Case) | Một nhu cầu tư vấn dịch vụ khách lẻ; một người có thể có nhiều hồ sơ |
@@ -439,7 +439,7 @@ Kế thừa cấu hình v0.8 tại 4.19; mốc mặc định vẫn 600 giây. Ng
 
 ### 4.15 Phiếu yêu cầu
 
-**Mục tiêu:** tách công việc cần phối hợp/xử lý sau khỏi phiên chat ngắn. Là khả năng chung của ba BUC nguồn, không tạo kênh tiếp nhận thứ tư. Tên menu C-04 **Phiếu yêu cầu**; nút **Tạo phiếu xử lý**, form D-11. Sau Bắt đầu xử lý hiện lựa chọn tạo phiếu; trong ca IN_PROGRESS/WAITING cũng có nút ở panel khách hàng.
+**Mục tiêu:** tách công việc cần phối hợp/xử lý sau khỏi phiên chat ngắn. Là khả năng chung của ba BUC nguồn, không tạo kênh tiếp nhận thứ tư. Tên menu C-04 **Phiếu yêu cầu**; nút **Tạo phiếu yêu cầu**, form D-11. Sau Bắt đầu xử lý hiện lựa chọn tạo phiếu; trong ca IN_PROGRESS/WAITING cũng có nút ở panel khách hàng.
 
 | Trường | Quy tắc |
 |---|---|
@@ -662,7 +662,7 @@ Control được chọn theo ý nghĩa: các giá trị phân loại có thể c
 
 ### 4.26 Menu, design system và dữ liệu review
 
-Menu CSKH hiện hành theo thứ tự **Tiếp nhận & Xử lý → Phiếu yêu cầu → CSKH log → Thông báo → Mẫu thông báo**. Hai mục cuối vẫn disabled/future theo BR-15. Đổi tên C-04 từ “Phiếu yêu cầu CSKH” thành **Phiếu yêu cầu** tại menu, tiêu đề và breadcrumb; vẫn dùng mã REQ-… và nút Tạo phiếu xử lý. Việc đổi tên không gộp ca CS-… với phiếu.
+Menu CSKH hiện hành theo thứ tự **Tiếp nhận & Xử lý → Phiếu yêu cầu → CSKH log → Thông báo → Mẫu thông báo**. Hai mục cuối vẫn disabled/future theo BR-15. Đổi tên C-04 từ “Phiếu yêu cầu CSKH” thành **Phiếu yêu cầu** tại menu, tiêu đề và breadcrumb; vẫn dùng mã REQ-… và nút Tạo phiếu yêu cầu. Việc đổi tên không gộp ca CS-… với phiếu.
 
 Nguồn giao diện Portal: [Operation Portal Design System v0.3](../Design/operation_portal_design_system/hiu-hospital-design-system-v0.3/readme.md), ánh xạ cụ thể tại [DESIGN v0.9](prototype-portal-v0.9.0/DESIGN.md). Portal dùng Lexend cho nội dung, Plus Jakarta Sans cho heading; nền `#f6f8fd`, heading `#16205c`, nội dung `#3b4177`; sidebar 264px/header 64px trên desktop. Control, bảng, màu ngữ nghĩa, bo góc và responsive theo bộ chuẩn; giữ nhãn chữ bên cạnh dấu màu. Widget khách tiếp tục Montserrat theo Website HIUH, không áp typography Portal vào Website một cách máy móc.
 
@@ -729,7 +729,7 @@ Số mẫu là độ bao phủ để thử UI, không là KPI hay số bắt bu�
 | BE-004 | Nguồn lịch trả/cập nhật kết quả | BUC-001/002/003 khi đã gửi nhu cầu |
 | BE-005 | CRM xác nhận/từ chối bàn giao | BUC-001/002/003 theo nhánh B2B |
 | BE-006 | Hoạt động khách, cập nhật kết nối hoặc timeout phiên | BUC-001 |
-| BE-007 | Tạo/cập nhật phiếu xử lý liên quan | Nhánh dùng chung BUC-001/002/003 |
+| BE-007 | Tạo/cập nhật phiếu yêu cầu liên quan | Nhánh dùng chung BUC-001/002/003 |
 
 ### 6.2 BUC-001 — Tiếp tục chăm sóc từ AI
 
@@ -1051,7 +1051,7 @@ Open question không chặn v0.6: hai cách sort cùng tồn tại theo yêu c�
 | DEC-CSKH-034 | Cột [tùy nguồn] / source / identity; AI trái danh sách, phải khách + xử lý | 4.11/4.13; thay thứ tự v0.6 |
 | DEC-CSKH-035 | 10 phút idle từ khách, không từ lúc mở phiên hoặc tin CSKH | S-19; BR-23; FR-32/33 |
 | DEC-CSKH-036 | Cho chat công khai đúng phiên và quyền, phải có ACK bàn giao | Thay giới hạn no-reply của FR-03 v0.6; không mở kênh mới |
-| DEC-CSKH-037 | Nút Tạo phiếu xử lý; module Phiếu yêu cầu CSKH | Thay quyết định chưa tạo phiếu riêng ở 4.9 v0.6; FR-34 |
+| DEC-CSKH-037 | Nút Tạo phiếu yêu cầu; module Phiếu yêu cầu CSKH | Thay quyết định chưa tạo phiếu riêng ở 4.9 v0.6; FR-34 |
 | DEC-CSKH-038 | Menu Tiếp nhận & Xử lý; ca CS-… khác phiếu REQ-… | Thuật ngữ nằm trong 4.1.1, không tách file quyết định riêng |
 | DEC-CSKH-039 | Chọn lọc mẫu HTML, không tự nhập cấp cứu/CTI/dashboard | Giữ 3 BUC nguồn; 4.9/4.15 |
 
@@ -1060,7 +1060,7 @@ Open question không chặn v0.6: hai cách sort cùng tồn tại theo yêu c�
 | M-40 / C-01 | Cảnh báo phiên còn mở, ưu tiên và lọc |
 | M-41..43 / C-02 | Chat AI còn phiên / hết phiên / chưa rõ kết nối |
 | M-44..45 / C-04 | Danh sách phiếu và chi tiết/lịch sử |
-| M-46 / D-11 | Form Tạo phiếu xử lý |
+| M-46 / D-11 | Form Tạo phiếu yêu cầu |
 
 Bộ v0.7 gồm **46 frame, 4 màn, 11 overlay**; kế thừa M-01..39, giữ D-05 của v0.6. Kiểm chứng thực tế và ảnh nằm ở [QA v0.7](prototype-portal-v0.7.0/QA.md), hướng dẫn chạy ở [README v0.7](prototype-portal-v0.7.0/README.md), [review các trạng thái](prototype-portal-v0.7.0/review.html), [HTML độc lập](handoff/CSKH-Operation-Portal-v0.7.0.html).
 

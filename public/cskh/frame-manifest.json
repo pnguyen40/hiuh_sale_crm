@@ -299,7 +299,7 @@
       "frame_id": "M-46",
       "surface": "C-02 + D-11",
       "state_id": "CREATE_TICKET",
-      "review_focus": "Tạo phiếu xử lý từ ca đã bắt đầu"
+      "review_focus": "Tạo phiếu yêu cầu từ ca đã bắt đầu"
     }
   ],
   "prototype_version": "0.7.0",

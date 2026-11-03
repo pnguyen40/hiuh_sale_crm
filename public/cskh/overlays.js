@@ -26,7 +26,7 @@ export const GEOMETRY = {
   "D-08": [640, 270, 640, 540],
 };
 const TITLES = {
-  "D-11": ["Tạo phiếu yêu cầu CSKH", "Giao việc cần xử lý tiếp và theo dõi kết quả.", "Tạo phiếu xử lý"],
+  "D-11": ["Tạo phiếu yêu cầu", "Giao việc cần xử lý tiếp và theo dõi kết quả.", "Tạo phiếu yêu cầu"],
   "D-09": ["Đặt hẹn qua CSKH", "Gửi nhu cầu để bộ phận đặt lịch sắp xếp. Chưa phải lịch đã xác nhận.", "Gửi yêu cầu đặt hẹn"],
   "D-10": ["Chuyển nhu cầu doanh nghiệp sang CRM", "Chuyển sang Cơ hội khám đoàn của CRM trong Operation Portal.", "Chuyển sang CRM"],
   "D-01": [

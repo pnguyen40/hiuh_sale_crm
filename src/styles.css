@@ -4028,7 +4028,10 @@ html,body{margin:0;height:100%}body{font-family:var(--font-body);font-size:14px;
 
 /* ===== Lucide icons + responsive shell (HIU TO-BE) ===== */
 .crm-prototype svg.ms { width: 1.15em; height: 1.15em; flex: none; vertical-align: middle; }
-.crm-2 { width: var(--crm-sidebar-w); }
+/* Keep every module reachable without scrolling the dashboard. */
+.crm-2 { width: var(--crm-sidebar-w); position: sticky; top: 0; height: 100dvh; align-self: flex-start; overflow: hidden; }
+.crm-6 { min-height: 0; overscroll-behavior-y: contain; }
+.crm-6 > *, .crm-3, .crm-user-footer { flex-shrink: 0; }
 .crm-nav-toggle { display: none; }
 .crm-nav-overlay { position: fixed; inset: 0; background: rgba(14, 19, 32, 0.5); z-index: 60; }
 .crm-31 { min-width: 0; }
